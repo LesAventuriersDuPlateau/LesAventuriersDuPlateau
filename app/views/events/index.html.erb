@@ -7,7 +7,7 @@
 
     <%= link_to "Créer un event", new_event_path %>    
 
-    <% @events.each do |event| %>
+    <% @events_true.each do |event| %>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><%= event.title %></h5>

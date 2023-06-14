@@ -7,6 +7,7 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @order = Order.new
+    @events_true = Event.where(is_validate: true)
   end
 
   # GET /events/1 or /events/1.json
@@ -70,6 +71,6 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :description, :price, :image_url, :city, :zip_code, :start_date, :duration)
+      params.require(:event).permit(:title, :description, :price, :image_url, :city, :zip_code, :start_date, :duration, :is_validate)
     end
 end
