@@ -44,7 +44,17 @@
         <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
         </span>
         <span class="navbar-text nav-link">
-        <%= link_to "Mon panier", events_path %>
+        <%= link_to "Mon panier", cart_path(current_user.cart.id) %>
+        <% if @events_in_cart.count > 0 %>
+    <% total_events = []
+        @events_in_cart.each do |event_choosed|
+            event_quantity = event_choosed.quantity
+            total_events << event_quantity
+        end %>
+    <span class="badge badge-pill badge-info"><%= total_events.inject(0){|sum,x| sum + x }%></span>
+<% else %>
+    <span class="badge badge-pill badge-info">0</span>
+<% end %>
         </span>
         <% else %>
         <span class="navbar-text nav-link">

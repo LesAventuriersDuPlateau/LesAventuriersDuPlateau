@@ -1,0 +1,47 @@
+<br/>
+<div class="container">
+    <h1>Mon panier</h1>
+    <br/>
+    <br/>
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Nom de l'event</th>
+                        <th scope="col">Prix unitaire</th>
+                        <th scope="col">Prix selon quantité</th>
+                        <th scope="col"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% total_price = [] %>
+                        <%  @events_in_cart.each do |event| %>
+                            <tr>
+                            <th scope="row"><%= event.quantity %></th>
+                            <td><%= event.event.title %></td>
+                            <td><%= event.event.price %> €</td>
+                            <td><%= total_event = event.event.price*event.quantity.to_d %> €</td>
+                            <% total_price << total_event %>
+                           <td><%= button_to "Supprimer cet article", order_path(event.id), method: :delete, class: 'btn btn-danger' %>
+                            </tr>
+                        <% end %>
+                         <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td></td></td>
+                            <td></td>
+                            </tr>
+                            <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td class="font-weight-bold">Prix total :</td>
+                            <td><%= total_price.inject(0){|sum,x| sum + x }%> €</td>
+                            </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>

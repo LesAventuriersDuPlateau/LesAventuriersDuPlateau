@@ -1,14 +1,28 @@
-<p style="color: green"><%= notice %></p>
+<br/>
+<div class="container">
+    <h1>Tous les événements bébé</h1>
+    <br/>
+    <br/>
+    <br/>
 
-<h1>Events</h1>
+    <%= link_to "Créer un event", new_event_path %>    
 
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
-  <% end %>
+    <% @events.each do |event| %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= event.title %></h5>
+                <p class="card-text"><%= event.description %></p>
+                <p class="card-text"><%= event.price %>€</p>
+                <% if user_signed_in? %>
+    <%= form_for @order do |f| %>
+        <%= f.hidden_field :event_id, value: event.id %>
+        <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+        <button type="submit" class="btn btn-success">Ajouter au panier</button>
+    <% end %>
+<% end %>
+    <%= link_to "Show this event", event %>
+            </div>
+        </div>
+        <br/>
+    <% end %>
 </div>
-
-<%= link_to "New event", new_event_path %>
