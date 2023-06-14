@@ -1,14 +1,18 @@
 class EventsController < ApplicationController
+  include EventsHelper
+  before_action :save_events_in_cart
   before_action :set_event, only: %i[ show edit update destroy ]
 
   # GET /events or /events.json
   def index
     @events = Event.all
+    @order = Order.new
   end
 
   # GET /events/1 or /events/1.json
   def show
     @event = Event.find(params[:id])
+    @order = Order.new
   end
 
   # GET /events/new

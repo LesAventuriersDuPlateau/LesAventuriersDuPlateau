@@ -13,6 +13,14 @@
                 <h5 class="card-title"><%= event.title %></h5>
                 <p class="card-text"><%= event.description %></p>
                 <p class="card-text"><%= event.price %>€</p>
+                <% if user_signed_in? %>
+    <%= form_for @order do |f| %>
+        <%= f.hidden_field :event_id, value: event.id %>
+        <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+        <button type="submit" class="btn btn-success">Ajouter au panier</button>
+    <% end %>
+<% end %>
+    <%= link_to "Show this event", event %>
             </div>
         </div>
         <br/>
