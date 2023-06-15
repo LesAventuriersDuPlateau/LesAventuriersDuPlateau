@@ -1,0 +1,15 @@
+<h1>Profil de l'utilisateur</h1>
+<h2>email: <%= @user.email %></h2>
+<%= link_to "modifier le profil", edit_user_registration_path %>
+<% if @user.cart.orders.any? %>
+    <p>Commande : </p>
+  <ul>
+    <% @user.cart.orders.each do |order| %>
+        <li>titre : <%= order.event.title %></li>
+        <li>prix : <%= order.event.price %> €/u</li>
+        <li>quantity : <%= order.quantity %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Aucune commande trouvée.</p>
+<% end %>
