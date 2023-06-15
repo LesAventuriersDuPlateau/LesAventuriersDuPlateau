@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   include EventsHelper
   before_action :save_events_in_cart
   before_action :set_event, only: %i[ show edit update destroy ]
+  before_action :check_event_validation, only: %i[ edit show ]
 
 
   # GET /events or /events.json
@@ -24,6 +25,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    @event = Event.find(params[:id])
   end
 
   # POST /events or /events.json
@@ -74,4 +76,14 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:title, :description, :price, :image_url, :city, :zip_code, :start_date, :duration, :is_validate)
     end
+
+    def check_event_validation
+      @event = Event.find(params[:id])
+      
+      if !@event.is_validate
+        flash[:error] = "Cet événement ne peut pas être modifié."
+        redirect_to root_path
+      end
+    end
+
 end
