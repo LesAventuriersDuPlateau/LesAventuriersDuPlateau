@@ -9,10 +9,8 @@
       <p class="card-text"><%= event.description %></p>
       <p class="card-text"><%= event.price %>€</p>
     </div>
-    <%= form_with(model: event, url: edit_admin_path(event), method: :patch) do |form| %>
-      <%= form.hidden_field :is_validate, value: true %>
-      <%= form.submit "Valider l'event" %>
-    <% end %>
+    <%= button_to "valider l'event", admin_path(event), method: :patch %>
+    <%= button_to "Supprimer cet event", admin_path(event), method: :delete %>
   </div>
 <% end %>
 

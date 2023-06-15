@@ -4,8 +4,10 @@ class AdminsController < ApplicationController
   end
 
   def update
+    puts "£" * 30
     @event = Event.find(params[:id])
-    if @event.update(event_params)
+    if @event.update(is_validate: true)
+      puts "$" * 30
       redirect_to root_path, notice: "L'événement a été mis à jour avec succès."
     else
       flash[:error] = "La mise à jour de l'événement a échoué."
@@ -13,6 +15,12 @@ class AdminsController < ApplicationController
     end
   end
   
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to admin_path(current_user.id)
+  end
+
   private
   
   def event_params
