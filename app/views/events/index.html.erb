@@ -1,29 +1,42 @@
 <br/>
 <div class="container">
+    <% if user_signed_in? && current_user.pseudo ==  nil%>
+        <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
+        <h2>Bienvenue parmis nous choisissez votre pseudo pour accéder au site</h2>
+        <div class="field">
+            <%= f.label :pseudo %>
+            <%= f.text_field :pseudo %>
+        </div>
+
+        <div class="actions">
+            <%= f.submit "Mettre à jour le pseudo" %>
+        </div>
+        <% end %>
+    <% end %>
+    <% if user_signed_in? && current_user.pseudo !=  nil%>
+        <h1>bienvenue a toi <%= current_user.pseudo %> </h1>
+    <% end %>    
+
     <h1>Tous les événements bébé</h1>
-    <br/>
-    <br/>
-    <br/>
+    <br>
     <% if user_signed_in? %>
     <%= link_to "Créer un event", new_event_path %>
     <% end %>    
-
     <% @events_true.each do |event| %>
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title"><%= event.title %></h5>
-                <p class="card-text"><%= event.description %></p>
                 <p class="card-text"><%= event.price %>€</p>
-            <% if user_signed_in? %>
-            <%= form_for @order do |f| %>
-                <%= f.hidden_field :event_id, value: event.id %>
-                <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                <button type="submit" class="btn btn-success">Ajouter au panier</button>
+                <% if user_signed_in? %>
+                <%= form_for @order do |f| %>
+                    <%= f.hidden_field :event_id, value: event.id %>
+                    <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+                    <button type="submit" class="btn btn-success">Ajouter au panier</button>
+                <% end %>
             <% end %>
-        <% end %>
-    <%= link_to "Show this event", event %>
-            </div>
+        <%= link_to "Show this event", event %>
         </div>
-        <br/>
-    <% end %>
+    </div>
+    <br/>
+<% end %>
 </div>

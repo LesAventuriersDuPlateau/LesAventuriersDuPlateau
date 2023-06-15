@@ -1,5 +1,6 @@
 <h1>Profil de l'utilisateur</h1>
-<h2>email: <%= @user.email %></h2>
+<h2>email : <%= @user.email %></h2>
+<h2>pseudo : <%= @user.pseudo %></h2>
 <%= link_to "modifier le profil", edit_user_registration_path %>
 <% if @user.cart.orders.any? %>
     <p>Commande : </p>
