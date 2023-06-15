@@ -1,3 +1,5 @@
+LES AVENTURIERS DU PLATEAU
+
 1. Présentation 🧑🏼‍🏫
 Notre application web est une plateforme complète qui offre la possibilité d'acheter des jeux de société et de rechercher des événements par géolocalisation, accessibles partout en France.
 
