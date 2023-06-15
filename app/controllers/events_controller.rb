@@ -14,6 +14,12 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     @order = Order.new
+
+    if !@event.is_validate
+      flash[:error] = "Cet événement n'est pas disponible."
+      redirect_to root_path
+    end
+
   end
 
   # GET /events/new
