@@ -4,8 +4,9 @@
     <br/>
     <br/>
     <br/>
-
-    <%= link_to "Créer un event", new_event_path %>    
+    <% if user_signed_in? %>
+    <%= link_to "Créer un event", new_event_path %>
+    <% end %>    
 
     <% @events_true.each do |event| %>
         <div class="card" style="width: 18rem;">

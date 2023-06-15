@@ -44,4 +44,6 @@
                 </table>
             </div>
         </div>
+        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: "btn btn-primary", data: {turbo: false} %>
+
 </div>
