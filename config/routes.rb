@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:create, :update, :destroy]
   resources :carts, except: [:index, :new, :edit]
   resources :events
+  resources :profil_users, only: [:show]
   devise_for :users
   root to: "events#index"
 

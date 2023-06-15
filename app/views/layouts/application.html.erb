@@ -35,7 +35,7 @@
         </ul>
         <% if user_signed_in? %>
         <span class="navbar-text nav-link">
-        <%= link_to "Mon compte", events_path %>
+        <%= link_to "Mon compte", profil_user_path(current_user.id) %>
         </span>
         <span class="navbar-text nav-link">
         <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
