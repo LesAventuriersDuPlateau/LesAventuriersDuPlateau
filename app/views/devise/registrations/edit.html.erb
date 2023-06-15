@@ -36,6 +36,16 @@
   </div>
 <% end %>
 
+<%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
+    <div class="field">
+      <%= f.label :pseudo %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.text_field :pseudo %>
+  </div>
+
+  <div class="actions">
+      <%= f.submit "Mettre à jour le pseudo" %>
+  </div>
+<% end %>
 <h3>Cancel my account</h3>
 
 <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>

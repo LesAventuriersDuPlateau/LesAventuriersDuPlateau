@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :events
   resources :profil_users, only: [:show]
   devise_for :users
+  resources :pseudo
   root to: "events#index"
   resources :admins 
 
