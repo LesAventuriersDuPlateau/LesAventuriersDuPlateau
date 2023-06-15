@@ -4,11 +4,9 @@ class AdminsController < ApplicationController
   end
 
   def update
-    puts "£" * 30
     @event = Event.find(params[:id])
     if @event.update(is_validate: true)
-      puts "$" * 30
-      redirect_to root_path, notice: "L'événement a été mis à jour avec succès."
+      redirect_to admin_path, notice: "L'événement a été mis à jour avec succès."
     else
       flash[:error] = "La mise à jour de l'événement a échoué."
       render :show
