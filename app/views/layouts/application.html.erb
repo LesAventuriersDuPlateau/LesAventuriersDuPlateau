@@ -29,36 +29,39 @@
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"></a>
-          </li>
         </ul>
         <% if user_signed_in? %>
         <span class="navbar-text nav-link">
         <%= link_to "Mon compte", profil_user_path(current_user.id) %>
         </span>
         <span class="navbar-text nav-link">
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
         </span>
         <span class="navbar-text nav-link">
-        <%= link_to "Mon panier", cart_path(current_user.cart.id) %>
-        <% if @events_in_cart && @events_in_cart.count > 0 %>
-    <% total_events = []
-        @events_in_cart.each do |event_choosed|
-            event_quantity = event_choosed.quantity
-            total_events << event_quantity
-        end %>
-    <span class="badge badge-pill badge-info"><%= total_events.inject(0){|sum,x| sum + x }%></span>
-<% else %>
-    <span class="badge badge-pill badge-info">0</span>
-<% end %>
+
+          <%= link_to "Mon panier", cart_path(current_user.cart.id) %>
+          <% if @events_in_cart && @events_in_cart.count > 0 %>
+              <% total_events = []
+                  @events_in_cart.each do |event_choosed|
+                      event_quantity = event_choosed.quantity
+                      total_events << event_quantity
+                  end %>
+                <span class="badge badge-pill badge-info"><%= total_events.inject(0){|sum,x| sum + x }%></span>
+              <% else %>
+            <span class="badge badge-pill badge-info">0</span>
+          <% end %>
         </span>
         <% else %>
         <span class="navbar-text nav-link">
-        <%= link_to "Sign in", new_user_session_path %>
+          <%= link_to "Sign in", new_user_session_path %>
         </span>
         <span class="navbar-text nav-link">
-        <%= link_to "Sign up", new_user_registration_path %>
+          <%= link_to "Sign up", new_user_registration_path %>
+        </span>
+        <% end %>
+        <% if user_signed_in? && current_user.role === 'admin' %>
+        <span class="nav-item">
+          <a class="nav-link" href=" <%= admin_path(current_user.id) %> "> Dashboard Admin</a>
         </span>
         <% end %>
       </div>

@@ -2,9 +2,12 @@
 
 <%= render @event %>
 
+
 <div>
+<% if user_signed_in? && current_user.role === 'admin' %>
   <%= link_to "Edit this event", edit_event_path(@event) %> |
   <%= link_to "Back to events", events_path %>
 
   <%= button_to "Destroy this event", @event, method: :delete %>
+  <% end %>
 </div>
