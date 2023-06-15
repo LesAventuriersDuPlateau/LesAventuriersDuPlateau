@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :events
   devise_for :users
   root to: "events#index"
+  resources :admins 
+
 
   scope '/checkout' do
     post 'create', to: 'checkout#create', as: 'checkout_create'
