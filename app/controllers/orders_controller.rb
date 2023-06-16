@@ -18,5 +18,4 @@ class OrdersController < ApplicationController
   def permit_link_params
     params.require(:order).permit(:event_id, :cart_id, :quantity)
   end
-
 end
