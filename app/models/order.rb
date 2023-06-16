@@ -10,5 +10,4 @@ class Order < ApplicationRecord
   		@new_event_add.update(quantity: @new_event_add.quantity + 1)
   	end
   end
-
 end
