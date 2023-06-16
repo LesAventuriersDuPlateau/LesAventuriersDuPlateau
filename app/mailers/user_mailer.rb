@@ -9,4 +9,12 @@ class UserMailer < ApplicationMailer
         # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
         mail(to: @user.email, subject: 'Bienvenue chez nous !') 
     end
+
+    #def after_payment_email(user)
+        #@user = user
+        #@order = order
+        #@url = 'http://lesaventuriersduplateau.fr/login'
+        #mail(to: @user.email, subject: 'Merci pour ton achat !')
+    #end
+
 end
