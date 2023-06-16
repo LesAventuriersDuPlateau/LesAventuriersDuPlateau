@@ -40,3 +40,6 @@ Pourquoi les gens doivent rejoindre ce projet ?
 🏄🏾‍♂️ Facilité d'utilisation : Notre application web est conçue pour offrir une interface conviviale et intuitive. Les utilisateurs pourront facilement naviguer entre les différentes fonctionnalités, acheter des jeux, rechercher des événements et effectuer des réservations en quelques clics.
 
 👩🏿‍🤝‍👨🏻👨🏽‍🤝‍👨🏾 Communauté engagée : Rejoindre ce projet permettra aux utilisateurs de se connecter avec une communauté de joueurs passionnés et de partager leur enthousiasme pour les jeux de société. Des discussions, des conseils et des recommandations pourront être échangés entre les membres.
+
+Maquette figma
+https://www.figma.com/file/MJNzicriN3J3sDySJ2GO6T/Maquette-Les-aventuriers-du-plateau?type=design&node-id=1%3A2&t=QG9LAdnwyccMlnL6-1
