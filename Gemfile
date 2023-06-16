@@ -6,7 +6,7 @@ ruby "3.0.0"
 ######
 gem 'devise'
 gem "table_print"
-gem 'faker'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem 'stripe'
 gem 'dotenv-rails'
 ######
