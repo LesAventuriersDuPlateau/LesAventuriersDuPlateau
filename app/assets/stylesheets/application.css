@@ -3,11 +3,6 @@ nav {
     color: #0038FF;
 }
 
-.cart-badge {
-    color: #0038FF;
-    margin-left: 5px;
-}
-
 a.nav-link {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
@@ -39,6 +34,23 @@ a.navbar-brand {
     text-decoration: none;
 }
 
+.btn-custom {
+  background: #F5C0FB;
+}
+
+
+.btn-out {
+  text-decoration: none;
+  border: none;
+  padding: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #FF7310;
+  background-color: #F5C0FB;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  }
   
 body {
     background-color: #FDFAF4;
