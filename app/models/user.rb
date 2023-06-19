@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  after_create :welcome_send
+  #after_create :welcome_send
   has_one :cart
 
   validates :email, 
