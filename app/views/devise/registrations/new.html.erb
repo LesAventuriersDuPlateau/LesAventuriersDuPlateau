@@ -1,29 +1,32 @@
-<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+<div class="card-inscription">
+  <div class="card-body-inscription">
+    <h1 style="text-align: center">S'INSCRIRE</h1>
+    <div class="field">
+     <%= f.label :email %>
+     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
+    <%= f.label :créer_le_mot_de_passe %>
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :confirmer_le_mot_de_passe %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+   <div style="text-align: center">
+    <%= f.submit "Créer le compte" %>
+   </div>
   </div>
-<% end %>
+  <% end %>
+ </div>
+</div>
 
 <%= render "devise/shared/links" %>

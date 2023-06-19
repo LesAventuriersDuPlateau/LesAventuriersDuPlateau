@@ -13,3 +13,63 @@
  *= require_tree .
  *= require_self
  */
+
+
+/* CARD INSCRIPTION */
+.card-inscription {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.card-body-inscription {
+    background-color: #ff7310;
+    padding-top: 20px;
+    padding: 100px;
+}
+
+.card-body-inscription h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #F5C0FB;
+    font-weight: bold; 
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.field label {
+    font-family: 'Poppins', sans-serif;
+    flex-basis: 50%;
+    padding-right: 10px;
+    color: #F5C0FB;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  font-family: 'Poppins', sans-serif;
+  color: #F5C0FB;
+  flex-grow: 1;
+  border: none;
+  border-bottom: 1px solid #F5C0FB; /* Add underline style */
+  background-color: #ff7310;
+  padding: 2px;
+}
+
+.actions{
+    margin-top: 40px;
+}
+
