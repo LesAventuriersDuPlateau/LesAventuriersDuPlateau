@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-expand-lg">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">LES AVENTURIERS DU PLATEAU</a> 
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02"aria-expanded="false" aria-label="Toggle navigation">
+  			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarColor02">
+  			<ul class= "navbar-nav ms-auto"  id="navbar-list">
+  				<li class="nav-item">
+	  				<a class="nav-link" href= "<%= root_path %>">Evénements</a>
+  				</li>
+  				<% if user_signed_in? %>
+						<li class="nav-item">
+							<a class="nav-link" href="<%= cart_path(current_user.cart.id)%>">Mon panier</a>
+	  						<% if @events_in_cart && @events_in_cart.count > 0 %>
+                <% total_events = []
+                  @events_in_cart.each do |event_choosed|
+                  event_quantity = event_choosed.quantity
+                  total_events << event_quantity
+                end %>
+                <li class="badge badge-pill badge-info"><%= total_events.inject(0){|sum,x| sum + x }%></li>
+                  <% else %>
+                    <li class="badge badge-pill badge-info">0</li>
+                  <% end %>
+                    <li class="nav-item">
+                      <a class="nav-link" href="<%= profil_user_path(current_user.id)%>">Mon compte</a>
+                    </li>
+                    <li class="nav-link">
+                      <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+                    </li>
+                    <% else %>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Connexion/Inscription</a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="<%= new_user_session_path %>">Connexion</a>
+                        <a class="dropdown-item" href="<%= new_user_registration_path %>">Inscription</a>
+                    <% end %>
+                      </div>
+                  </li>
+            </li>               
+				</ul>
+		  </div>
+	</div>
+</nav>
