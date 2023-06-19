@@ -1,5 +1,5 @@
 <br/>
-<div class="container">
+<div>
     <% if user_signed_in? && current_user.pseudo ==  nil%>
         <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
         <h2>Bienvenue parmis nous choisissez votre pseudo pour accéder au site</h2>
@@ -16,7 +16,26 @@
     <% if user_signed_in? && current_user.pseudo !=  nil%>
         <h1>bienvenue a toi <%= current_user.pseudo %> </h1>
     <% end %>    
+    <section class="container d-flex flex-column justify-content-center align-items-center py-5">
+    <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTé</h2>
+        <swiper-container class="mySwiper" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
+        slides-per-view="3" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+        coverflow-effect-modifier="2" coverflow-effect-slide-shadows="false" loop="true">
+            <% @events_true.each do |event| %>
+            <swiper-slide class="rounded-3">
+                <div class="container p-0">
+                    <img src=" https://swiperjs.com/demos/images/nature-1.jpg" class="rounded-top-3" />
+                    <div class="d-flex flex-column align-items-center">
+                        <h3 class="text-center title-event text-uppercase pt-3"> <%= event.title%> </h3>
+                        <a href="<%= event_path(event) %>"><button class="buttonMore fs-3 p-0"><pre class="m-0"> + </pre></button></a>
+                        </a>
+                    </div>
+                </div>
+            </swiper-slide>
+            <% end %>
+        </swiper-container>
 
+    </section>
     <h1>Tous les événements bébé</h1>
     <br>
     <% if user_signed_in? %>
@@ -40,3 +59,5 @@
     <br/>
 <% end %>
 </div>
+
+

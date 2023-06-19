@@ -41,5 +41,43 @@ a.navbar-brand {
 
   
 body {
-    background-color: #FDFAF4;
-}  
+    background-color: #FDFAF4  !important;
+}
+  
+swiper-container {
+    width: 75%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+  }
+
+  swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-color: #f5c0fb;
+    width: 100px;
+    height: 100px;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  
+  .title-section{
+      font-size: 4em;
+      color: #0038FF;
+  }
+
+  .title-event{
+      font-size: 1em;
+      color: #ff7310;
+  }
+
+  .buttonMore{
+      border: 2px solid #ff7310;
+      background-color: transparent;
+      color: #ff7310;
+      border-radius: 100px;
+      margin-bottom: 20px;
+  }
