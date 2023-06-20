@@ -39,7 +39,7 @@
 <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
     <div class="field">
       <%= f.label :pseudo %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.text_field :pseudo %>
+      <%= f.text_field :pseudo, minlength: 3 %>
   </div>
 
   <div class="actions">

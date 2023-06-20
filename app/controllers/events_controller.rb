@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @events = Event.all
     @order = Order.new
     @events_true = Event.where(is_validate: true)
+    @events_carrousel = Event.where(is_validate: true).order(created_at: :desc).limit(7)
   end
 
   # GET /events/1 or /events/1.json
@@ -30,7 +31,8 @@ class EventsController < ApplicationController
 
   # POST /events or /events.json
   def create
-    @event = Event.new(event_params)
+    all_params_event = event_params.merge(user: current_user)
+    @event = Event.new(all_params_event)
 
     respond_to do |format|
       if @event.save

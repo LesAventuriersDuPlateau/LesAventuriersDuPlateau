@@ -1,50 +1,63 @@
-<br/>
 <div class="container">
-    <h1>Mon panier</h1>
+    <h1 class="title-page">MON</h1>
+    <h1 class="title-page">PANIER</h1>
     <br/>
     <br/>
-        <div class="row">
-            <div class="col-lg-8 col-md-8">
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">Quantité</th>
-                        <th scope="col">Nom de l'évènement</th>
-                        <th scope="col">Prix unitaire</th>
-                        <th scope="col">Prix selon quantité</th>
-                        <th scope="col"></th>
+    <div class="row text-card">
+        <div class="col-lg-8 col-md-8">
+            <dl class="row">
+                <% total_price = [] %>
+                <% @events_in_cart.each do |event| %>
+                    <dt class="col-sm-3">Quantité</dt>
+                    <dd class="col-sm-9"><%= event.quantity %></dd>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% total_price = [] %>
-                        <%  @events_in_cart.each do |event| %>
-                            <tr>
-                            <th scope="row"><%= event.quantity %></th>
-                            <td><%= event.event.title %></td>
-                            <td><%= event.event.price %> €</td>
-                            <td><%= total_event = event.event.price*event.quantity.to_d %> €</td>
-                            <% total_price << total_event %>
-                           <td><%= button_to "Supprimer cet article", order_path(event.id), method: :delete, class: 'btn btn-danger' %>
-                            </tr>
-                        <% end %>
-                         <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td></td></td>
-                            <td></td>
-                            </tr>
-                            <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td class="font-weight-bold">Prix total :</td>
-                            <td><%= total_price.inject(0){|sum,x| sum + x }%> €</td>
-                            </tr>
-                    </tbody>
-                </table>
-            </div>
+                        <hr>
+                    
+                    <dl class="row">
+                    <dt class="col-sm-3">Nom de l'évènement</dt>
+                    <dd class="col-sm-6"><%= event.event.title %></dd>
+                    <dd class="col-sm-3">
+                        <%= button_to "Supprimer cet article", order_path(event.id), method: :delete, class: 'btn-out' %>
+                    </dd>
+                    </dl>
+
+                        <hr>
+                    
+                    <dt class="col-sm-3">Prix unitaire</dt>
+                    <dd class="col-sm-9"><%= event.event.price %> €</dd>
+
+                        <hr>
+                    
+                    <dt class="col-sm-3">Prix selon quantité</dt>
+                    <dd class="col-sm-9"><%= total_event = event.event.price * event.quantity.to_d %> €</dd>
+                    
+                    <% total_price << total_event %>
+                    
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                <% end %>
+                
+                <dt class="col-sm-3"></dt>
+                <dd class="col-sm-9"></dd>
+                
+                <dt class="col-sm-3"></dt>
+                <dd class="col-sm-9"></dd>
+                
+                <dt class="col-sm-3 font-weight-bold">Prix total :</dt>
+                <dd class="col-sm-9"><%= total_price.inject(0){|sum,x| sum + x } %> €</dd>
+            </dl>
         </div>
-        <% if @events_in_cart.any? %>
-        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: "btn btn-primary", data: {turbo: false} %>
-        <% end %>
+    </div>
+    
+    <% if @events_in_cart.any? %>
+        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: 'btn-out', data: {turbo: false} %>
+    <% end %>
 </div>
+
+        <div class="banner">
+      <%= image_tag('headerladp.jpg', alt: 'My Image') %>
+      <h1>Rejoignez la grande tribu des boardergames</h1>
+      <h2>18 940 inscrits actuellement</h2>
+    </div>
+
+     <%= image_tag('headerladp.jpeg', alt: 'Image', class: 'img-class') %>
