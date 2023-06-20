@@ -10,6 +10,7 @@ class EventsController < ApplicationController
     @events = Event.all
     @order = Order.new
     @events_true = Event.where(is_validate: true)
+    @events_carrousel = Event.where(is_validate: true).order(created_at: :desc).limit(7)
   end
 
   # GET /events/1 or /events/1.json
