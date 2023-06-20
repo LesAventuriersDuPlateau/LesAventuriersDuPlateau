@@ -4,7 +4,7 @@
 <section class= "col-lg-3 col-md-6 col-sm-4">
 <% @events_false.each do |event| %>
   <div class="card dashboardcard ">
-    <div class="card-header cardcolor" >Proposé par </div>
+    <div class="card-header cardcolor" >Proposé par <%= User.find_by(id: event.user_id)&.pseudo %> </div>
     <div class="card-body ">
       <h5 class="card-title">Nom de l'événement :<%= event.title %></h5>
       <hr>
