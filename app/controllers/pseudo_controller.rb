@@ -1,4 +1,4 @@
-class PseudoController < ApplicationController    
+class PseudoController < ApplicationController
 
     def update
         @user = current_user
