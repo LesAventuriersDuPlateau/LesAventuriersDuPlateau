@@ -1,20 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
 /* CARD INSCRIPTION */
 .card-inscription {
     position: relative;
@@ -24,18 +7,18 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 20px;
-    border-radius: 10px;
+    margin: 20px;    
 }
 
 .card-body-inscription {
     background-color: #ff7310;
     padding-top: 20px;
     padding: 100px;
+    border-radius: 30px;
 }
 
 .card-body-inscription h1 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     color: #F5C0FB;
     font-weight: bold; 
 }
@@ -58,18 +41,71 @@
     display: inline-block;
 }
 
-.field input[type="email"],
-.field input[type="password"] {
-  font-family: 'Poppins', sans-serif;
-  color: #F5C0FB;
-  flex-grow: 1;
-  border: none;
-  border-bottom: 1px solid #F5C0FB; /* Add underline style */
-  background-color: #ff7310;
-  padding: 2px;
+.field input {
+    font-family: 'Poppins', sans-serif;
+    color: #F5C0FB;
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #F5C0FB; /* Add underline style */
+    background-color: #ff7310;
+    padding: 2px;
+    margin-left: 10px;
 }
 
-.actions{
-    margin-top: 40px;
+.sign-up input[type="submit"] {
+    margin-top: 50px;
+    text-decoration: none;
+    border: none;
+    padding: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #FF7310;
+    background-color: #F5C0FB;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
 }
 
+/* CARD LOG IN */
+
+.card-log_in {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;    
+}
+
+.card-body-log_in {
+    background-color: #F5C0FB;
+    padding-top: 20px;
+    padding: 100px;
+    border-radius: 30px;
+}
+
+.card-body-log_in h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #FF7310;
+    font-weight: bold; 
+}
+
+.field-log_in {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.field label {
+    font-family: 'Poppins', sans-serif;
+    flex-basis: 50%;
+    padding-right: 10px;
+    color: #F5C0FB;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
