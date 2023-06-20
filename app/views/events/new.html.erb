@@ -1,9 +1,11 @@
-<h1>Crée ton<br>évènement</h1>
+<section class="container py-4">
+  <h2 class="title-page">Crée ton<br>évènement</h2>
+  <div class="col-8 offset-2">
+    <%= render "form", event: @event %>
+  </div>
+  <br>
 
-<%= render "form", event: @event %>
-
-<br>
-
-<div>
-  <%= link_to "Back to events", events_path %>
-</div>
+  <div>
+    <%= link_to "<-- Retour sur events", events_path,class: "text-decoration-none" %>
+  </div>
+</section>
