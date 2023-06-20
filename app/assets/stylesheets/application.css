@@ -157,9 +157,25 @@
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-h1, h2, h3, h6{
+body {
+    background-color: #FDFAF4 !important;
+} 
+
+h1, h2, h3, h4, h6{
     font-family: 'Bebas Neue', sans-serif;
     cursor: pointer;
+    color: #0038FF !important;
+}
+
+.special-title {
+    font-size: 95px;
+}
+
+.title-page {
+    font-size: 6em;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #0038FF;
+    line-height: 0.8
 }
 
 p{
@@ -241,13 +257,43 @@ a.navbar-brand {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  padding-inline: 10px;
   }
-  
-body {
 
-    background-color: #FDFAF4  !important;
+ 
+.btn-success{
+    background: #F5C0FB !important;
+    border: none !important;  
+    color:  #FF7310 !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    border-radius: 5px; 
+}  
+
+.event-title{
+    font-family: 'Bebas Neue', sans-serif;
+    color: #F5C0FB;
+    font-size: 30px;
 }
-  
+
+.card-body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.custom-button{
+    border: none !important;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.event-card{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh; 
+}
+
+
 swiper-container {
     width: 100%;
     padding-top: 50px;
@@ -301,8 +347,42 @@ swiper-slide img {
 .txt-blue {
     color: #0038FF;
 }
-.card-body h5,p{
-    color: #FF7310;
+
+
+
+.text-card {
+    color: #FF7310 !important;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.btn-dashboard {
+  text-decoration: none;
+  border: none;
+  padding: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #FF7310;
+  background-color: #F5C0FB;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding-inline: 10px;
 }
 
+.dashboardcard {
+   color:#FF7310 !important;
+}
+
+.cardcolor{
+    background-color: #F5C0FB !important;
+    color: #FF7310 !important;
+  }
+
+  .card-text {
+    color: #FF7310 !important;
+  }
+
+  .card-title {
+    color: #FF7310 !important;
+  }
 

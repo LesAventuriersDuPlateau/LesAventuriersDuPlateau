@@ -1,13 +1,14 @@
-<p style="color: green"><%= notice %></p>
+<div class="container">
+  <div class="col-lg-8 col-md-8 col-sm-4">
+    <p style="color: green"><%= notice %></p>
 
-<%= render @event %>
+    <%= render @event %>
 
-
-<div>
-  <% if user_signed_in? && current_user.role === 'admin' %>
-    <%= link_to "Edit this event", edit_event_path(@event) %> |
-    <%= link_to "Back to events", events_path %>
-
-    <%= button_to "Destroy this event", @event, method: :delete %>
-  <% end %>
+    <% if user_signed_in? && current_user.role === 'admin' %>
+      <%= link_to "Corriger l'évènement", edit_event_path(@event) %> |
+      <%= link_to "Retour aux évènements", events_path %>
+      <br>
+      <%= button_to "Supprimer", @event, method: :delete, class: "custom-button" %>
+    <% end %>
+  </div>
 </div>
