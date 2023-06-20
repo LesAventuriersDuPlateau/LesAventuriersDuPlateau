@@ -84,6 +84,7 @@ a.navbar-brand {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  padding-inline: 10px;
   }
   
 body {
@@ -101,10 +102,11 @@ body {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  padding-inline: 10px;
 }
 
-.dashboard-card {
-    color: #F5C0FB !important;
+.dashboardcard {
+   color:#FF7310 !important;
 }
 
 .btn-group-spacing {
