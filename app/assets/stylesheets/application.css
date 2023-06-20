@@ -103,6 +103,23 @@ body {
   -moz-border-radius: 5px;
 }
 
-.hr {
-    background-color: #F5C0FB;
+.dashboard-card {
+    color: #F5C0FB !important;
 }
+
+.btn-group-spacing {
+    margin-top: 20px;
+  }
+
+.cardcolor{
+    background-color: #F5C0FB !important;
+    color: #FF7310 !important;
+  }
+
+  .card-text {
+    color: #FF7310 !important;
+  }
+
+  .card-title {
+    color: #FF7310 !important;
+  }

@@ -1,12 +1,12 @@
 <h1>Bienvenue sur le dashboard Admin </h1>
-
 <p>veuillez valider OU PAS les events suivants</p>
 
+<section class= "dashboardcard col-lg-4 col-md-8 col-sm-4">
 <% @events_false.each do |event| %>
-  <div class="card" style="width: 25rem; ; border-color: #F5C0FB;">
-    <div class="card-header" style="background-color: #F5C0FB; color: #FF7310;"> header</div>
+  <div class="card">
+    <div class="card-header cardcolor" >Proposé par </div>
     <div class="card-body">
-      <h5 class="card-title">Nom de l'évenement :<%= event.title %></h5>
+      <h5 class="card-title">Nom de l'événement :<%= event.title %></h5>
       <hr>
       <p class="card-text">localisation :<%= event.city %></p>
       <hr>
@@ -17,9 +17,10 @@
       <p class="card-text">prix :<%= event.price %>€</p>
     </div>
   </div>
-  <div class="btn-group">
+  <div class="btn-group btn-group-spacing">
    <%= button_to "valider l'event", admin_path(event), method: :patch, class: 'btn-dashboard' %>
     <%= button_to "Supprimer cet event", admin_path(event), method: :delete, class: 'btn-dashboard' %>
   </div>
 <% end %>
 
+</section>
