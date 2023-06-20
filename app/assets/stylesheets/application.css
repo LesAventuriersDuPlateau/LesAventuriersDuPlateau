@@ -1,3 +1,160 @@
+/* CARD INSCRIPTION */
+.card-sign_up {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 100px; 
+    width: 630px;
+}
+
+.card-body-sign_up {
+    background-color: #ff7310;
+    padding-top: 70px;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+}
+
+.card-body-sign_up h1 {
+    font-size: 5em;
+    height: 100px;
+    color: #F5C0FB;
+    font-weight: bold; 
+}
+
+.field-sign_up {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.field-sign_up label {
+    font-family: 'Poppins', sans-serif;
+    flex-basis: 50%;
+    color: #F5C0FB;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.field-sign_up input {
+    font-family: 'Poppins', sans-serif;
+    color: #F5C0FB;
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #F5C0FB;
+    background-color: #ff7310;
+    padding: 2px;
+    margin-left: 80px;
+    width: 250%;
+    max-width: 700px;
+    padding-right: 20px;
+}
+
+.sign-up input[type="submit"] {
+    margin-top: 50px;
+    text-decoration: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #FF7310;
+    background-color: #F5C0FB;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-inline: 10px;
+}
+
+.pink-link {
+    color: #F5C0FB;
+}
+
+/* CARD LOG IN */
+
+.card-log_in {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 150px; /* Ajustez cette valeur selon votre besoin */
+    margin-bottom: 100px; /* Ajustez cette valeur selon votre besoin */
+    max-width: 100%; 
+}
+
+.card-body-log_in {
+    background-color: #F5C0FB;
+    padding-top: 70px;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 70px;
+    border-radius: 30px;
+}
+
+.card-body-log_in h1 {
+    font-size: 5em;
+    height: 100px;
+    color: #FF7310;
+    font-weight: bold; 
+}
+
+.field-log_in {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.field-log_in label {
+    font-family: 'Poppins', sans-serif;
+    flex-basis: 50%;
+    color: #FF7310;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-left: 0px;
+}
+
+.field-log_in input {
+    font-family: 'Poppins', sans-serif;
+    color: #FF7310;
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #FF7310;
+    background-color: #F5C0FB;
+    padding: 2px;
+    margin-left: 10px;
+    width: 250%;
+    max-width: 700px;
+    padding-right: 20px;
+}
+
+.log-in input[type="submit"] {
+    margin-top: 50px;
+    text-decoration: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #F5C0FB;
+    background-color: #FF7310;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-inline: 10px;
+}
+
+.orange-link {
+    color: #FF7310
+}
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 h1, h2, h3, h6{
