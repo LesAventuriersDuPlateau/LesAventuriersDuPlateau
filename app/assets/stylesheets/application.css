@@ -5,6 +5,13 @@ h1, h2, h3, h6{
     cursor: pointer;
 }
 
+.title-page {
+    font-size: 6em;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #0038FF;
+    line-height: 0.8
+}
+
 p{
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
@@ -89,4 +96,9 @@ a.navbar-brand {
 body {
     background-color: #FDFAF4;
 }  
+
+.text-card {
+    color: #FF7310 !important;
+    font-family: 'Poppins', sans-serif;
+  }
 
