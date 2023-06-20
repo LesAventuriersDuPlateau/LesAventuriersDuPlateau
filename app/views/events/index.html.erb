@@ -1,16 +1,20 @@
+
 <div>
     <% if user_signed_in? && current_user.pseudo ==  nil%>
+
         <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-        <h2>Bienvenue parmis nous choisissez votre pseudo pour accéder au site</h2>
+        <h2>Bienvenue parmi nous choisissez votre pseudo pour accéder au site</h2>
         <div class="field">
             <%= f.label :pseudo %>
             <%= f.text_field :pseudo %>
         </div>
 
-        <div class="actions">
-            <%= f.submit "Mettre à jour le pseudo" %>
-        </div>
+            <div class="actions">
+                <%= f.submit "Mettre à jour le pseudo" %>
+            </div>
+            <% end %>
         <% end %>
+
     <% end %>
     <% if user_signed_in? && current_user.pseudo !=  nil%>
         <h2>bienvenue a toi <%= current_user.pseudo %> </h2>
@@ -63,5 +67,4 @@
         </div>
     </section>
 </div>
-
 
