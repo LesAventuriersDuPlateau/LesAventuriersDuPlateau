@@ -1,3 +1,37 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+h1, h2, h3, h6{
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+footer{
+    position:relative;
+    margin-top: 60vh;
+    bottom: 0;
+    height: 0;
+    color: #0038FF;
+}
+
+.ms-3{
+    margin-left: 1rem!important;
+}
+
+.d-flex{
+    display: flex!important;
+}
+
+.list-unstyled{
+    list-style: none;
+    cursor: pointer;
+}
+
+
 nav {
     background-color: #FDFAF4;
     color: #0038FF;
@@ -55,3 +89,4 @@ a.navbar-brand {
 body {
     background-color: #FDFAF4;
 }  
+
