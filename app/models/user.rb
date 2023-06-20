@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   #after_create :welcome_send
   has_one :cart
+  has_many :events
 
   validates :email, 
     presence: true,
