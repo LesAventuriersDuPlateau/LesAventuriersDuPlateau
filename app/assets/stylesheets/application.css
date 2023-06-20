@@ -55,3 +55,20 @@ a.navbar-brand {
 body {
     background-color: #FDFAF4;
 }  
+
+.btn-dashboard {
+  text-decoration: none;
+  border: none;
+  padding: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #FF7310;
+  background-color: #F5C0FB;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+.hr {
+    background-color: #F5C0FB;
+}

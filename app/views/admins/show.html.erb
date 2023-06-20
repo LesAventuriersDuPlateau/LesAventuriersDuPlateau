@@ -3,14 +3,23 @@
 <p>veuillez valider OU PAS les events suivants</p>
 
 <% @events_false.each do |event| %>
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 25rem; ; border-color: #F5C0FB;">
+    <div class="card-header" style="background-color: #F5C0FB; color: #FF7310;"> header</div>
     <div class="card-body">
-      <h5 class="card-title"><%= event.title %></h5>
-      <p class="card-text"><%= event.description %></p>
-      <p class="card-text"><%= event.price %>€</p>
+      <h5 class="card-title">Nom de l'évenement :<%= event.title %></h5>
+      <hr>
+      <p class="card-text">localisation :<%= event.city %></p>
+      <hr>
+      <p class="card-text">description :<%= event.description %></p>
+      <hr>
+      <p class="card-text">date de l'évenement :<%= event.start_date %></p>
+      <hr>
+      <p class="card-text">prix :<%= event.price %>€</p>
     </div>
-    <%= button_to "valider l'event", admin_path(event), method: :patch %>
-    <%= button_to "Supprimer cet event", admin_path(event), method: :delete %>
+  </div>
+  <div class="btn-group">
+   <%= button_to "valider l'event", admin_path(event), method: :patch, class: 'btn-dashboard' %>
+    <%= button_to "Supprimer cet event", admin_path(event), method: :delete, class: 'btn-dashboard' %>
   </div>
 <% end %>
 
