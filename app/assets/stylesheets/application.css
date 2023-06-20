@@ -248,6 +248,7 @@ a.navbar-brand {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
+  padding-inline: 10px;
   }
   
 body {
@@ -308,9 +309,7 @@ swiper-slide img {
 .txt-blue {
     color: #0038FF;
 }
-.card-body h5,p{
-    color: #FF7310;
-}
+
 
 
 .text-card {
@@ -318,3 +317,33 @@ swiper-slide img {
     font-family: 'Poppins', sans-serif;
   }
 
+.btn-dashboard {
+  text-decoration: none;
+  border: none;
+  padding: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #FF7310;
+  background-color: #F5C0FB;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding-inline: 10px;
+}
+
+.dashboardcard {
+   color:#FF7310 !important;
+}
+
+.cardcolor{
+    background-color: #F5C0FB !important;
+    color: #FF7310 !important;
+  }
+
+  .card-text {
+    color: #FF7310 !important;
+  }
+
+  .card-title {
+    color: #FF7310 !important;
+  }
