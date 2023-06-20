@@ -1,20 +1,20 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-<div class="card-inscription">
-  <div class="card-body-inscription">
+<div class="card-sign_up">
+  <div class="card-body-sign_up">
     <h1 style="text-align: center">S'INSCRIRE</h1>
-    <div class="field">
+    <div class="field-sign_up">
      <%= f.label :email %>
      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
-  <div class="field">
+  <div class="field-sign_up">
     <%= f.label :créer_le_mot_de_passe %>
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="field-sign_up">
     <%= f.label :confirmer_le_mot_de_passe %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
@@ -22,11 +22,10 @@
   <div class="sign-up">
    <div style="text-align: center">
     <%= f.submit "Créer le compte" %><br>
+    <br>
      <%= render "devise/shared/links" %>
    </div>
   </div>
   <% end %>
  </div>
 </div>
-
-<%= render "devise/shared/links" %>
