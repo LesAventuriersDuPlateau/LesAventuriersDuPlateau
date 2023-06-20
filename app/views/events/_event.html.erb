@@ -1,51 +1,49 @@
-<div id="<%= dom_id event %>">
-  <p>
-    <strong>Title:</strong>
-    <%= event.title %>
-  </p>
+<div class="d-flex flex-column flex-md-row justify-content-center align-items-center py-5 my-5" id="<%= dom_id event %>">
+  <div class="col-11 col-md-5 col-xl-4">
+      <%= image_tag event.image_url , class: 'img-fluid rounded-3', alt: 'Image' %>
+  </div>
+  <div class="col-11 col-md-6 col-xl-5 offset-md-1 mt-3">    
+      <h3 class="txt-pink fs-1">
+        <strong><%= event.title %></strong>
+      </h3>
+      <div class="bg-orange txt-pink p-3 rounded-3 mb-3">
+      <p>
+        <strong>Description :</strong>
+        <%= event.description %>
+      </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= event.description %>
-  </p>
+      <p>
+        <strong>Prix :</strong>
+        <%= event.price %> €
+      </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= event.price %>
-  </p>
+      <p>
+        <strong>Ville :</strong>
+        <%= event.city %>
+      </p>
 
-  <p>
-    <strong>Image url:</strong>
-    <%= event.image_url %>
-  </p>
+      <p>
+        <strong>Code Postal :</strong>
+        <%= event.zip_code %>
+      </p>
 
-  <p>
-    <strong>City:</strong>
-    <%= event.city %>
-  </p>
+      <p>
+        <strong>Départ :</strong>
+        <%= event.start_date.strftime("%d %B %Y") %>
+      </p>
 
-  <p>
-    <strong>Zip code:</strong>
-    <%= event.zip_code %>
-  </p>
-
-  <p>
-    <strong>Start date:</strong>
-    <%= event.start_date %>
-  </p>
-
-  <p>
-    <strong>Duration:</strong>
-    <%= event.duration %>
-  </p>
-
-  <% if user_signed_in? %>
-    <%= form_for @order do |f| %>
-              <%= f.hidden_field :event_id, value: @event.id %>
-              <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-              <button type="submit" class="btn btn-success">Ajouter au panier</button>
-    <% end %>
-  <% end %>
-  <br/><br/>
+      <p>
+        <strong>Durée :</strong>
+        <%= event.duration %> min
+      </p>
+      </div>
+      <% if user_signed_in? %>
+        <%= form_for @order do |f| %>
+                  <%= f.hidden_field :event_id, value: @event.id %>
+                  <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+                  <button type="submit" class="buttonMore bg-pink p-2">Je réserve mon billet</button>
+        <% end %>
+      <% end %>
+  </div>
 
 </div>
