@@ -317,6 +317,11 @@ swiper-slide img {
     font-family: 'Poppins', sans-serif;
   }
 
+  .text-profiluser {
+    color: #FF7310 !important;
+    font-family: 'Poppins', sans-serif;
+  }
+
 .btn-dashboard {
   text-decoration: none;
   border: none;
