@@ -53,11 +53,3 @@
         <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: 'btn-out', data: {turbo: false} %>
     <% end %>
 </div>
-
-        <div class="banner">
-      <%= image_tag('headerladp.jpg', alt: 'My Image') %>
-      <h1>Rejoignez la grande tribu des boardergames</h1>
-      <h2>18 940 inscrits actuellement</h2>
-    </div>
-
-     <%= image_tag('headerladp.jpeg', alt: 'Image', class: 'img-class') %>
