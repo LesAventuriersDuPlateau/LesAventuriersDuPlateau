@@ -1,4 +1,5 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+<h1 class="special-title">Modifier mon <br> profil<%= resource_name.to_s.humanize %></h1>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -7,47 +8,56 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
+  <br>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :mot_de_passe %> <i>(Entrez ici votre nouveau mot de passe)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><%= @minimum_password_length %> caractères minimum</em>
     <% end %>
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :confirmation_de_mot_de_passe %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :mot_de_passe_actuel %> <i>(Entrez ici votre mot de passe actuel)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
+  <br>
 
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Mettre à jour", class: 'btn-out' %>
   </div>
 <% end %>
+  <br>
 
 <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
     <div class="field">
-      <%= f.label :pseudo %> <i>(leave blank if you don't want to change it)</i><br />
-      <%= f.text_field :pseudo %>
+      <%= f.label :pseudo %> <i>(Modifiez seulement si vous voulez changer votre pseudo)</i><br />
+      <%= f.text_field :pseudo, minlength: 3 %>
   </div>
+  <br>
 
   <div class="actions">
-      <%= f.submit "Mettre à jour le pseudo" %>
+      <%= f.submit "Mettre à jour le pseudo", class: 'btn-out' %>
   </div>
 <% end %>
-<h3>Cancel my account</h3>
+  <br>
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+<h3>Supprimer mon compte</h3>
 
-<%= link_to "Back", :back %>
+<div>Mécontent ? <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?", turbo_confirm: "Êtes-vous sûr ?" }, method: :delete, class: 'btn-out' %></div>
+<br>
+
+<%= link_to "Retour au profil", :back %>
+</div>

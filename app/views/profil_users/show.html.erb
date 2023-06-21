@@ -1,16 +1,12 @@
-<h1>Profil de l'utilisateur</h1>
-<h2>email : <%= @user.email %></h2>
-<h2>pseudo : <%= @user.pseudo %></h2>
-<%= link_to "modifier le profil", edit_user_registration_path %>
-<% if @user.cart.orders.any? %>
-    <p>Commande : </p>
-  <ul>
-    <% @user.cart.orders.each do |order| %>
-        <li>titre : <%= order.event.title %></li>
-        <li>prix : <%= order.event.price %> €/u</li>
-        <li>quantity : <%= order.quantity %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>Aucune commande trouvée.</p>
-<% end %>
+<h1 class="title-page">MON</h1>
+<h1 class="title-page">COMPTE</h1>
+<br/>
+<br/>
+
+  <section class="pl-2">
+    <h5 class="text-profiluser">Email : <%= @user.email %></h5>
+    <h5 class="text-profiluser">Pseudo : <%= @user.pseudo %></h5>
+      <br>
+      <br>
+        <%= link_to "modifier le profil", edit_user_registration_path, class: 'btn-out' %>
+  </section>

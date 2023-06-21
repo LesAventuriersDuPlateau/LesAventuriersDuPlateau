@@ -31,7 +31,8 @@ class EventsController < ApplicationController
 
   # POST /events or /events.json
   def create
-    @event = Event.new(event_params)
+    all_params_event = event_params.merge(user: current_user)
+    @event = Event.new(all_params_event)
 
     respond_to do |format|
       if @event.save
