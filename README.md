@@ -22,13 +22,13 @@ Il nous faut 100 balles et un mars
 4. La version minimaliste mais fonctionnelle pour la première semaine
 Inscription et authentification des utilisateurs
 Base de l'e-boutique
-Consultation des évènements
-Création d’évènements pour les utilisateurs
-Gestion des réservations et des paiements pour la vente et les évènements
+Consultation des événements
+Création d’événements pour les utilisateurs
+Gestion des réservations et des paiements pour la vente et les événements
 5. La version que l’on présentera aux jurys 🎳
 e-boutique finalisée
 Session utilisateur/ admin
-Intégration de services de géolocalisation pour les recherches d’évènements
+Intégration de services de géolocalisation pour les recherches d’événements
 6. Notre mentor 🐓🐇🦦
 Lilian Muller heureux propriétaire d’une fromagerie dans le nord de la France (mais avec la fibre quand même), détenteur de plus de 2000 jeux de sociétés, GRAND vainqueur de la belette de Winchester, concepteur de la potion de guérison des ongles incarnés, et auteur du parchemin "Le Ruby On Rails expliqué aux personnes âgées » ! bref Lilian quoi
 
