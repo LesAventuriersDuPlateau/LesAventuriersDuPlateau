@@ -284,6 +284,7 @@ a.navbar-brand {
 
 .card-body{
     font-family: 'Poppins', sans-serif;
+    color: #FDFAF4 !important;
 }
 
 .custom-button{
@@ -292,20 +293,27 @@ a.navbar-brand {
     font-family: 'Poppins', sans-serif;
 }
 
-.event-card{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh; 
+.card-box{
+    width: 100%;
+    height: 100%;
+    background-color: #FF7310 !important;
+    border: none !important;
 }
 
+.event-img{
+    border-radius: 5px;
+    margin-top: 45px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 
 swiper-container {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
     
-  }
+}
 
 swiper-slide {
     background-position: center;
@@ -389,11 +397,13 @@ swiper-slide img {
     color: #FF7310 !important;
   }
 
-  .card-text {
-    color: #FF7310 !important;
-  }
+.card-text {
+color: #FF7310 !important;
+}
 
-  .card-title {
-    color: #FF7310 !important;
-  }
+.card-title {
+color: #FF7310 !important;
+}
+
+
 

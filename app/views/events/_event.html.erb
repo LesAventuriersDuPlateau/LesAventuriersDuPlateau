@@ -3,18 +3,18 @@
       <h1 class="special-title">Evène<br>ment</h1>
           <br>
 
-        <div class="d-flex">
-          <div>  
-            <img src=" <%= event.image_url %> " class="img-fluid rounded-start" alt="image de l'évènement">
+        <div class="d-flex justify-content-center">
+          <div class="col-11 col-md-5">  
+            <img src=" <%= event.image_url %> " class="event-img img-fluid rounded-start" alt="Image de l'évènement">
           </div>
 
-        <div class="event-card d-flex flex-column align-items-center">
+        <div class="event-card d-flex col-11 col-md-5 flex-column align-items-center offset-md-1">
             <h5 class="event-title">
                 <strong>
                     <%= event.title %>
                 </strong>
             </h5>
-            <div class="card mb-3" style="max-width: 500px;">
+            <div class="card-box card mb-3 p-3">
                 <div class="row g-0">
                   
                     <div class="col-md-8">
