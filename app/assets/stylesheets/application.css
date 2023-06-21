@@ -1,25 +1,23 @@
 /* CARD INSCRIPTION */
-.container-sign_up {
+.container-sign_up, .container-log_in {
     margin: auto;
     margin-top: 150px;
     margin-bottom: 100px; 
-    width: 77%;
+    width: 60%;
     font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up {
     background-color: #ff7310;
-    padding-top: 40px;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 40px;
+    height: 100%;
+    padding: 40px;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up h1 {
-    font-size: 5em;
-    height: 100px;
+    font-size: 5vw;
+    max-height: 100px;
     color: #F5C0FB;
     font-weight: bold; 
 }
@@ -32,12 +30,14 @@
 
 .field-sign_up label {
     font-family: 'Poppins', sans-serif;
-    flex-basis: 30%;
+    flex-basis: 50%;
     color: #F5C0FB;
     display: flex;
     align-items: center;
-    margin-top: 10px;
-    padding-bottom: 5px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    display: inline-block;
+    margin-left: 0px;
 }
 
 .field-sign_up input {
@@ -47,11 +47,9 @@
     border: none;
     border-bottom: 1px solid #F5C0FB;
     background-color: #ff7310;
-    padding: 2px;
-    margin-left: 80px;
-    width: 250%;
-    max-width: 700px;
-    padding-right: 20px;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .sign-up input[type="submit"] {
@@ -73,13 +71,6 @@
 }
 
 /* CARD LOG IN */
-.container-log_in {
-    margin: auto;
-    margin-top: 150px;
-    margin-bottom: 100px; 
-    width: 77%;
-    font-family: 'Poppins', sans-serif;
-}
 
 .card-body-log_in {
     background-color: #F5C0FB;
@@ -92,8 +83,8 @@
 }
 
 .card-body-log_in h1 {
-    font-size: 5em;
-    height: 100px;
+    font-size: 5vw;
+    max-height: 100px;
     color: #FF7310;
     font-weight: bold; 
 }
@@ -123,11 +114,9 @@
     border: none;
     border-bottom: 1px solid #FF7310;
     background-color: #F5C0FB;
-    padding: 2px;
     margin-left: 10px;
-    width: 250%;
-    max-width: 700px;
-    padding-right: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .log-in input[type="submit"] {
