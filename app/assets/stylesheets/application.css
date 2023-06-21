@@ -8,6 +8,7 @@
     margin-top: 150px;
     margin-bottom: 100px; 
     width: 630px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up {
@@ -17,6 +18,7 @@
     padding-left: 90px;
     padding-bottom: 70px;
     border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up h1 {
@@ -396,4 +398,8 @@ swiper-slide img {
   .card-title {
     color: #FF7310 !important;
   }
+
+  /* .button_to .link_to {
+    font-family: 'Poppins', sans-serif;
+  } */
 

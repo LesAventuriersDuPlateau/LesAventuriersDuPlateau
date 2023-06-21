@@ -1,7 +1,7 @@
 <div>
     <% if user_signed_in? && current_user.pseudo ==  nil%>
         <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-        <h2>Bienvenue parmis nous choisissez votre pseudo pour accéder au site</h2>
+        <h2>Bienvenue parmi nous choisissez votre pseudo pour accéder au site</h2>
         <div class="field">
             <%= f.label :pseudo %>
             <%= f.text_field :pseudo %>
@@ -13,10 +13,10 @@
         <% end %>
     <% end %>
     <% if user_signed_in? && current_user.pseudo !=  nil%>
-        <h2>bienvenue a toi <%= current_user.pseudo %> </h2>
+        <h2>Bienvenue à toi <%= current_user.pseudo %> </h2>
     <% end %>
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
-    <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTé</h2>
+    <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
         <swiper-container class="mySwiper col-11 col-md-8 col-xl-5" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
         slides-per-view="3" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="100"
         coverflow-effect-modifier="2" coverflow-effect-slide-shadows="false" loop="true">
@@ -35,9 +35,9 @@
         </swiper-container>
     </section>
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
-    <h2 class="title-section mb-5 text-uppercase">NOS éVENEMENT</h2>
+    <h2 class="title-section mb-5 text-uppercase">NOS ÉVÉNEMENTS</h2>
         <% if user_signed_in? %>
-        <%= link_to "Créer un event", new_event_path, class: "bg-pink txt-orange text-decoration-none p-2 rounded-2" %>
+        <%= link_to "Créer un événement", new_event_path, class: "bg-pink txt-orange text-decoration-none p-2 rounded-2" %>
         <% end %>
         <div class="d-flex m-5 justify-content-center flex-wrap">
             <% @events_true.each do |event| %>
@@ -47,7 +47,7 @@
                         <h5 class="card-title"><%= event.title %></h5>
                         <p class="card-text "><%= event.price %> €</p>
                         <div class="container-fluid d-flex justify-content-center">
-                        <a href="<%= event_path(event) %>"><button class="buttonMore mx-2 p-2">voir plus</button></a>
+                        <a href="<%= event_path(event) %>"><button class="buttonMore mx-2 p-2">Voir plus</button></a>
                         <% if user_signed_in? %>
                             <%= form_for @order do |f| %>
                                 <%= f.hidden_field :event_id, value: event.id %>

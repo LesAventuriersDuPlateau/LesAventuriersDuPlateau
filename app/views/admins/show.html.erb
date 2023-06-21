@@ -2,22 +2,22 @@
 
 <div class="container">
 <h1 class= "txt-blue" >Bienvenue sur le dashboard Admin </h1>
-<p class= "txt-blue" >veuillez valider OU PAS les events suivants</p>
+<p class= "txt-blue" >Veuillez accepter ou refuser les événements suivants :</p>
   <div class="d-flex flex-wrap justify-content-center">
     <% @events_false.each do |event| %>
     <div class="col-5 m-2"> 
         <div class="card dashboardcard">
             <div class="card-header cardcolor" >Proposé par <%= User.find_by(id: event.user_id)&.pseudo %></div>
             <div class="card-body">
-                <h5 class="card-title">Evénement :<%= event.title %></h5>
+                <h5 class="card-title">Événement :<%= event.title %></h5>
                 <hr>
-                <p class="card-text">localisation :<%= event.city %></p>
+                <p class="card-text">Localisation :<%= event.city %></p>
                 <hr>
-                <p class="card-text">description :<%= event.description %></p>
+                <p class="card-text">Description :<%= event.description %></p>
                 <hr>
-                <p class="card-text">date de l'évenement :<%= event.start_date %></p>
+                <p class="card-text">Date de l'événement :<%= event.start_date %></p>
                 <hr>
-                <p class="card-text">prix :<%= event.price %>€</p>
+                <p class="card-text">Prix :<%= event.price %>€</p>
             </div>
         </div>
         <div class="btn-group m-3 d-flex justify-content-between">
