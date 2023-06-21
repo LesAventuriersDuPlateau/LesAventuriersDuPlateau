@@ -8,11 +8,11 @@
   			<ul class= "navbar-nav ms-auto d-flex align-items-center"  id="navbar-list">
           <% if user_signed_in? && current_user.role === 'admin' %>
           <span class="nav-item">
-            <a class="nav-link" href=" <%= admin_path(current_user.id) %> "> Dashboard Admin</a>
+            <a class="nav-link" href=" <%= admin_path(current_user.id) %> "> Tableau de bord</a>
           </span>
           <% end %>
   				<li class="nav-item">
-	  				<a class="nav-link" href= "<%= root_path %>">Evénements</a>
+	  				<a class="nav-link" href= "<%= root_path %>">Événements</a>
   				</li>
   				<% if user_signed_in? %>
 						<li class="nav-item">

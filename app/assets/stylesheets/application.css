@@ -8,6 +8,7 @@
     margin-top: 150px;
     margin-bottom: 100px; 
     width: 630px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up {
@@ -17,6 +18,7 @@
     padding-left: 90px;
     padding-bottom: 70px;
     border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up h1 {
@@ -398,6 +400,7 @@ swiper-slide img {
   }
 
 
+
   /* Scollbar /*
 
 /* width */
@@ -420,4 +423,5 @@ swiper-slide img {
   ::-webkit-scrollbar-thumb:hover {
     background: #f4d1f9;
   }
+
 
