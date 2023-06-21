@@ -249,6 +249,10 @@ a.navbar-brand {
     text-decoration: none;
 }
 
+.icon-home{
+    color: #0038FF;
+}
+
 .btn-custom {
   background: #F5C0FB;
 }
