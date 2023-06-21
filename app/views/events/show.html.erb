@@ -5,8 +5,8 @@
     <%= render @event %>
 
     <% if user_signed_in? && current_user.role === 'admin' %>
-      <%= link_to "Corriger l'évènement", edit_event_path(@event) %> |
-      <%= link_to "Retour aux évènements", events_path %>
+      <%= link_to "Corriger l'événement", edit_event_path(@event) %> |
+      <%= link_to "Retour aux événements", events_path %>
       <br>
       <%= button_to "Supprimer", @event, method: :delete, class: "custom-button" %>
     <% end %>
