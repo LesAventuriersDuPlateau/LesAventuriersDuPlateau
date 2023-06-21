@@ -119,10 +119,3 @@ a.navbar-brand {
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
 }
-
-.event-card{
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh; 
-}
