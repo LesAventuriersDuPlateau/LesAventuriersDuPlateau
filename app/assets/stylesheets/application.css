@@ -1,22 +1,18 @@
 /* CARD INSCRIPTION */
-.card-sign_up {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-sign_up {
     margin: auto;
     margin-top: 150px;
     margin-bottom: 100px; 
-    width: 630px;
+    width: 77%;
     font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up {
     background-color: #ff7310;
-    padding-top: 70px;
-    padding-right: 90px;
-    padding-left: 90px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
 }
@@ -36,14 +32,12 @@
 
 .field-sign_up label {
     font-family: 'Poppins', sans-serif;
-    flex-basis: 50%;
+    flex-basis: 30%;
     color: #F5C0FB;
     display: flex;
     align-items: center;
-    margin-top: 30px;
-    padding-bottom: 10px;
-    display: inline-block;
-    margin-left: 0px;
+    margin-top: 10px;
+    padding-bottom: 5px;
 }
 
 .field-sign_up input {
@@ -79,24 +73,22 @@
 }
 
 /* CARD LOG IN */
-.card-log_in {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-log_in {
     margin: auto;
-    margin-top: 150px; /* Ajustez cette valeur selon votre besoin */
-    margin-bottom: 100px; /* Ajustez cette valeur selon votre besoin */
-    max-width: 100%; 
+    margin-top: 150px;
+    margin-bottom: 100px; 
+    width: 77%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-log_in {
     background-color: #F5C0FB;
-    padding-top: 70px;
-    padding-right: 90px;
-    padding-left: 90px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
     border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-log_in h1 {
