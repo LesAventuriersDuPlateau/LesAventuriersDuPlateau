@@ -205,10 +205,6 @@ footer{
     display: flex!important;
 }
 
-.list-unstyled{
-    list-style: none;
-    cursor: pointer;
-}
 
 
 nav {
@@ -248,7 +244,11 @@ a.navbar-brand {
 }
 
 .btn-custom {
+  border: none;
+  border-radius: 5px !important;
+  color: #FF7310;
   background: #F5C0FB;
+  font-family: 'Poppins', sans-serif;
 }
 
 
@@ -267,14 +267,14 @@ a.navbar-brand {
   }
 
  
-.btn-success{
+.validation-button{
     background: #F5C0FB !important;
     border: none !important;  
     color:  #FF7310 !important;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     font-size: 1em;
     border-radius: 5px; 
-}  
+}
 
 .event-title{
     font-family: 'Bebas Neue', sans-serif;
@@ -287,15 +287,10 @@ a.navbar-brand {
     color: #FDFAF4 !important;
 }
 
-.custom-button{
-    border: none !important;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
-}
-
 .card-box{
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin-top: 20px;
     background-color: #FF7310 !important;
     border: none !important;
 }
@@ -362,17 +357,15 @@ swiper-slide img {
     color: #0038FF;
 }
 
-
-
 .text-card {
     color: #FF7310 !important;
     font-family: 'Poppins', sans-serif;
-  }
+}
 
-  .text-profiluser {
-    color: #FF7310 !important;
-    font-family: 'Poppins', sans-serif;
-  }
+.text-profiluser {
+color: #FF7310 !important;
+font-family: 'Poppins', sans-serif;
+}
 
 .btn-dashboard {
   text-decoration: none;
