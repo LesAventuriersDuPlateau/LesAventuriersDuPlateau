@@ -468,4 +468,28 @@ color: #FF7310 !important;
     background: #f4d1f9;
   }
 
+.body-pseudo {
+    background-color: #f5c0fb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-out2 {
+    text-decoration: none;
+    border: none;
+    padding: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #f5c0fb;
+    background-color: #FF7310;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-inline: 10px;
+    /* border: 2px solid #ff7310;
+    background-color: transparent; */
+    }
+
+ .monpseudo {
+    color : #FF7310;
+ }   
 

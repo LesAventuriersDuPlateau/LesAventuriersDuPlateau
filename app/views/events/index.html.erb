@@ -1,25 +1,31 @@
 
-  <section>
-    <% if user_signed_in? && current_user.pseudo ==  nil%>
-      <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-      <h2>Bienvenue parmi nous choisissez votre pseudo pour accéder au site</h2>
-      <div class="field">
-          <%= f.label :pseudo %>
-          <%= f.text_field :pseudo %>
-      </div>
-      <div class="actions">
-        <%= f.submit "Mettre à jour le pseudo" %>
-      </div>
-      <% end %>
+<div>
+    <section class="body-pseudo p-4">
+        <% if user_signed_in? && current_user.pseudo ==  nil%>
+            <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
+            <h2>Bienvenue parmi nous, il est temps de choisir ton pseudo</h2>
+            <div class="field">
+                <%= f.label :mon_pseudo, class: 'monpseudo' %>
+                <%= f.text_field :pseudo %>
+        </div>   
+
+            <br>
+
+        <div class="actions">
+            <%= f.submit "Mettre à jour le pseudo", class: 'btn-out2' %>
+        </div>
+        <% end %>
     <% end %>
     <% if user_signed_in? && current_user.pseudo !=  nil%>
       <div style="text-align: center">
       <h2>Bienvenue à toi <%= current_user.pseudo %> </h2>
       </div>
     <% end %>
-    <section>
-  <%= render 'events/banner' %>
-</section>
+    </section> 
+      <section>
+        <%= render 'events/banner' %>
+      </section>
+
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
       <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
       <swiper-container class="mySwiper col-11 col-md-8 col-xl-5" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
@@ -41,12 +47,14 @@
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
       <h2 class="title-section mb-5 text-uppercase">NOS ÉVÉNEMENTS</h2>
         <% if user_signed_in? %>
-          <div style="text-align: center;">
-            <p><strong>Vous aussi vous souhaitez créer votre propre événement que ce soit à quelques personnes pour découvrir un jeu <br> ou carrément organiser un événement, c'est vous le Maître du jeu :</strong></p><br>
-          </div>
-          <%= link_to "Créer un événement", new_event_path, class: "bg-pink txt-orange text-decoration-none p-2 rounded-2" %>
-          <% end %>
-          <div class="d-flex m-5 justify-content-center flex-wrap">
+
+        <div style="text-align: center;">
+            <p><strong>Devenez le Maître du jeu et créer votre propre événement :</strong></p><br>
+        </div>
+        <%= link_to "Créer un événement", new_event_path, class: "bg-pink txt-orange text-decoration-none p-2 rounded-2" %>
+        <% end %>
+        <div class="d-flex m-5 justify-content-center flex-wrap">
+
             <% @events_true.each do |event| %>
               <div class="card m-3 col-11 col-md-5 col-xl-3" >
                 <img class="card-img-top" src=" <%= event.image_url %> " alt="event image">
