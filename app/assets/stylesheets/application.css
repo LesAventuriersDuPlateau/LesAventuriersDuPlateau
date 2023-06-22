@@ -205,7 +205,7 @@ body {
     background-color: #FDFAF4 !important;
 } 
 
-h1, h2, h3, h4, h6{
+h1, h2, h3, h4 {
     font-family: 'Bebas Neue', sans-serif;
     cursor: pointer;
     color: #0038FF !important;
@@ -440,9 +440,32 @@ color: #FF7310 !important;
 color: #FF7310 !important;
 }
 
+/*Form profil user */
 
 
+/*Form event */
 
+.form-label {
+    font-family: 'Poppins', sans-serif;
+    color: #FF7310;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    display: inline-block;
+    justify-self: center;
+}
+
+.form-input {
+    font-family: 'Poppins', sans-serif;
+    color: #0038FF;
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #F5C0FB;
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
+    padding-left: 10px;
+}
 
   /* Scollbar /*
 
@@ -469,7 +492,8 @@ color: #FF7310 !important;
 
 .body-pseudo {
     background-color: #f5c0fb;
-    font-family: 'Poppins', sans-serif;
+    color: #0038FF;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .btn-out2 {

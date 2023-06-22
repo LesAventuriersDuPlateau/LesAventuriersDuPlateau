@@ -1,14 +1,12 @@
-
-    <section class="body-pseudo p-4">
+<section>
         <% if user_signed_in? && current_user.pseudo ==  nil%>
+            <div class="body-pseudo d-flex justify-content-around">
             <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-            <h2>Bienvenue parmi nous, il est temps de choisir ton pseudo</h2>
+            <h6>Bienvenue parmi nous, il est temps de choisir ton pseudo</h6>
             <div class="field">
                 <%= f.label :mon_pseudo, class: 'monpseudo' %>
                 <%= f.text_field :pseudo %>
         </div>   
-
-            <br>
 
         <div class="actions">
             <%= f.submit "Mettre à jour le pseudo", class: 'btn-out2' %>
@@ -20,7 +18,10 @@
       <h2>Bienvenue à toi <%= current_user.pseudo %> </h2>
       </div>
     <% end %>
-    </section> 
+            </div>
+    </section>
+    
+
       <section>
         <%= render 'events/banner' %>
       </section>
@@ -75,3 +76,4 @@
             <% end %>
           </div>
       </section>
+  </section>
