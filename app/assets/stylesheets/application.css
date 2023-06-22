@@ -1,27 +1,23 @@
 /* CARD INSCRIPTION */
-.card-sign_up {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container-sign_up, .container-log_in {
     margin: auto;
     margin-top: 150px;
     margin-bottom: 100px; 
-    width: 630px;
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up {
     background-color: #ff7310;
-    padding-top: 70px;
-    padding-right: 90px;
-    padding-left: 90px;
-    padding-bottom: 70px;
+    height: 100%;
+    padding: 40px;
     border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-sign_up h1 {
-    font-size: 5em;
-    height: 100px;
+    font-size: 5vw;
+    max-height: 100px;
     color: #F5C0FB;
     font-weight: bold; 
 }
@@ -51,11 +47,9 @@
     border: none;
     border-bottom: 1px solid #F5C0FB;
     background-color: #ff7310;
-    padding: 2px;
-    margin-left: 80px;
-    width: 250%;
-    max-width: 700px;
-    padding-right: 20px;
+    margin-left: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .sign-up input[type="submit"] {
@@ -77,29 +71,20 @@
 }
 
 /* CARD LOG IN */
-.card-log_in {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 150px; /* Ajustez cette valeur selon votre besoin */
-    margin-bottom: 100px; /* Ajustez cette valeur selon votre besoin */
-    max-width: 100%; 
-}
 
 .card-body-log_in {
     background-color: #F5C0FB;
-    padding-top: 70px;
-    padding-right: 90px;
-    padding-left: 90px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
     border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .card-body-log_in h1 {
-    font-size: 5em;
-    height: 100px;
+    font-size: 5vw;
+    max-height: 100px;
     color: #FF7310;
     font-weight: bold; 
 }
@@ -129,11 +114,9 @@
     border: none;
     border-bottom: 1px solid #FF7310;
     background-color: #F5C0FB;
-    padding: 2px;
     margin-left: 10px;
-    width: 250%;
-    max-width: 700px;
-    padding-right: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .log-in input[type="submit"] {
@@ -241,6 +224,10 @@ a.navbar-brand {
 
 .nav-item .nav-item:hover {
     text-decoration: none;
+}
+
+.icon-home{
+    color: #0038FF !important;
 }
 
 .btn-custom {
@@ -398,5 +385,31 @@ color: #FF7310 !important;
 color: #FF7310 !important;
 }
 
+
+
+
+
+  /* Scollbar /*
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: #ff7310;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #F5c0fb;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f4d1f9;
+  }
 
 
