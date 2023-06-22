@@ -1,10 +1,10 @@
-<div class="container">
-<h1 class="special-title">Modifier mon <br> profil<%= resource_name.to_s.humanize %></h1>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+<div class="form-edit-user flex-column align-items-center p-4 rounded-3">
+<h1 class="special-title">Modifier mon <br> profil<%= resource_name.to_s.humanize %></h1>
+
+  <div class="py-2 form-group text-center">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -13,7 +13,15 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
+  <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
+    <div class="actions text-center">
+      <%= f.label :pseudo %><br />
+      <%= f.text_field :pseudo, minlength: 3 %>
+  </div>
+  <br>
+<% end %>
+
+  <div class="py-2 form-group text-center">
     <%= f.label :mot_de_passe %> <i>(Entrez ici votre nouveau mot de passe)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
@@ -23,33 +31,20 @@
   </div>
   <br>
 
-  <div class="field">
+  <div class="py-2 form-group text-center">
     <%= f.label :confirmation_de_mot_de_passe %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
   <br>
 
-  <div class="field">
+  <div class="py-2 form-group text-center">
     <%= f.label :mot_de_passe_actuel %> <i>(Entrez ici votre mot de passe actuel)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
   <br>
 
-  <div class="actions">
+  <div class="actions text-center">
     <%= f.submit "Mettre à jour", class: 'btn-out' %>
-  </div>
-<% end %>
-  <br>
-
-<%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-    <div class="field">
-      <%= f.label :pseudo %> <i>(Modifiez seulement si vous voulez changer votre pseudo)</i><br />
-      <%= f.text_field :pseudo, minlength: 3 %>
-  </div>
-  <br>
-
-  <div class="actions">
-      <%= f.submit "Mettre à jour le pseudo", class: 'btn-out' %>
   </div>
 <% end %>
   <br>
