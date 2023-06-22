@@ -434,6 +434,9 @@ color: #FF7310 !important;
 color: #FF7310 !important;
 }
 
+/*Form profil user */
+
+
 /*Form event */
 
 .form-label {
@@ -448,10 +451,10 @@ color: #FF7310 !important;
 
 .form-input {
     font-family: 'Poppins', sans-serif;
-    color: #ff7310;
+    color: #0038FF;
     flex-grow: 1;
     border: none;
-    border-bottom: 1px solid #FF7310;
+    border-bottom: 1px solid #F5C0FB;
     width: 100%;
     max-width: 400px;
     justify-self: center;
