@@ -226,6 +226,10 @@ a.navbar-brand {
     text-decoration: none;
 }
 
+.icon-home{
+    color: #0038FF !important;
+}
+
 .btn-custom {
   border: none;
   border-radius: 5px !important;
