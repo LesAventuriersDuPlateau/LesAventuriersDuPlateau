@@ -250,7 +250,7 @@ a.navbar-brand {
 }
 
 .icon-home{
-    color: #0038FF;
+    color: #0038FF !important;
 }
 
 .btn-custom {
