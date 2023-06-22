@@ -206,7 +206,7 @@ body {
     background-color: #FDFAF4 !important;
 } 
 
-h1, h2, h3, h4, h6{
+h1, h2, h3, h4 {
     font-family: 'Bebas Neue', sans-serif;
     cursor: pointer;
     color: #0038FF !important;
@@ -470,7 +470,8 @@ color: #FF7310 !important;
 
 .body-pseudo {
     background-color: #f5c0fb;
-    font-family: 'Poppins', sans-serif;
+    color: #0038FF;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .btn-out2 {
