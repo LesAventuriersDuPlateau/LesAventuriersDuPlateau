@@ -8,44 +8,44 @@
   <% end %>
 
 <div class="form-create-event flex-column align-items-center p-4 rounded-3">
-  <div class="py-2 form-group">
-    <label for="title" style="display: block" class="form-label">Titre : </label>
-    <%= form.text_field :title ,class: "rounded-3 form-control" %>
+  <div class="py-2 form-group text-center">
+    <label for="title" style="display: block" class="form-label">Titre </label>
+    <%= form.text_field :title ,class: "form-input rounded-3" %>
   </div>
 
-  <div class="py-2 form-group">
-    <label for="description" style="display: block" class="form-label">Description : </label>
-    <%= form.text_area :description ,class: "rounded-3 form-control" %>
+  <div class="py-2 form-group text-center">
+    <label for="description" style="display: block" class="form-label">Description </label>
+    <%= form.text_area :description ,class: "form-input rounded-3" %>
   </div>
 
-  <div class="py-2 form-group">
-    <label for="price" style="display: block" class="form-label">Prix : </label>
-    <%= form.number_field :price ,class: "rounded-3 form-control"%>
+  <div class="py-2 form-group text-center">
+    <label for="image_url" style="display: block" class="form-label">Image <i>(renseigner le lien URL de votre image)</i></label>
+    <%= form.text_field :image_url ,class: "form-input rounded-3" %>
   </div>
 
-  <div class="py-2">
-    <label for="image_url" style="display: block" class="form-label">Image Url : </label>
-    <%= form.text_field :image_url ,class: "rounded-3 form-control"  %>
+  <div class="py-2 form-group text-center">
+    <label for="city" style="display: block" class="form-label">Ville </label>
+    <%= form.text_field :city ,class: "form-input rounded-3" %>
   </div>
 
-  <div class="py-2">
-    <label for="city" style="display: block" class="form-label">Ville : </label>
-    <%= form.text_field :city ,class: "rounded-3 form-control" %>
+  <div class="py-2 form-group text-center">
+    <label for="zip_code" style="display: block" class="form-label">Code Postal </label>
+    <%= form.text_field :zip_code ,class: "form-input rounded-3" %>
   </div>
 
-  <div class="py-2">
-    <label for="zip_code" style="display: block" class="form-label">Code Postal : </label>
-    <%= form.number_field :zip_code ,class: "rounded-3 form-control" %>
+  <div class="py-2 form-group text-center">
+    <label for="start_date" style="display: block" class="form-label">Date </label>
+    <%= form.datetime_field :start_date ,class: "form-input rounded-3 text-center" %>
   </div>
 
-  <div class="py-2">
-    <label for="start_date" style="display: block" class="form-label">Date : </label>
-    <%= form.datetime_field :start_date ,class: "rounded-3 form-control" %>
+  <div class="py-2 form-group text-center">
+    <label for="duration" style="display: block" class="form-label">Durée </label>
+    <%= form.number_field :duration ,class: "form-input rounded-3" %>
   </div>
 
-  <div class="py-2">
-    <label for="duration" style="display: block" class="form-label">Durée : </label>
-    <%= form.number_field :duration ,class: "rounded-3 form-control" %>
+  <div class="py-2 form-group text-center">
+    <label for="price" style="display: block" class="form-label">Prix </label>
+    <%= form.number_field :price ,class: "form-input rounded-3"%>
   </div>
   
   <div class="py-3">

@@ -441,9 +441,32 @@ color: #FF7310 !important;
 color: #FF7310 !important;
 }
 
+/*Form profil user */
 
 
+/*Form event */
 
+.form-label {
+    font-family: 'Poppins', sans-serif;
+    color: #FF7310;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    display: inline-block;
+    justify-self: center;
+}
+
+.form-input {
+    font-family: 'Poppins', sans-serif;
+    color: #0038FF;
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #F5C0FB;
+    width: 100%;
+    max-width: 400px;
+    justify-self: center;
+    padding-left: 10px;
+}
 
   /* Scollbar /*
 
