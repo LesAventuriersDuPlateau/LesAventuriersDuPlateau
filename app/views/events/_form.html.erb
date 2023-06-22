@@ -1,16 +1,13 @@
 <%= form_with(model: event) do |form| %>
   <% if event.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
       <ul>
-        <% event.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+      <li>Veuillez compléter les champs manquants</li>
+      <ul>
     </div>
   <% end %>
-<div class="form-create-event d-flex flex-column align-items-center bg-pink txt-orange p-4 rounded-3">
+
+<div class="form-create-event flex-column align-items-center p-4 rounded-3">
   <div class="py-2 form-group">
     <label for="title" style="display: block" class="form-label">Titre : </label>
     <%= form.text_field :title ,class: "rounded-3 form-control" %>
@@ -52,7 +49,9 @@
   </div>
   
   <div class="py-3">
-    <%= form.submit "Créer l'événement", class: "buttonMore py-1" %>  
+   <div style="text-align: center">
+    <%= form.submit "Créer l'événement", class: "buttonMore py-1" %>
+   </div>
   </div>
 </div>
 <% end %>

@@ -1,14 +1,15 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<div class="card-log_in">
-  <div class="card-body-log_in">
+
+<div class="container-log_in">
+ <div class="card-body-log_in">
     <h1 style="text-align: center">SE CONNECTER</h1>
   <div class="field-log_in">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field-log_in">
-    <%= f.label :mot_de_passe %><br />
+    <%= f.label :mot_de_passe %>
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
@@ -21,5 +22,5 @@
   </div>
   <% end %>
  </div>
-</div>
+ </div>
 </div>
