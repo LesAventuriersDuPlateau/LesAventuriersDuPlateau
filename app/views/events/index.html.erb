@@ -13,7 +13,9 @@
         <% end %>
     <% end %>
     <% if user_signed_in? && current_user.pseudo !=  nil%>
+        <div style="text-align: center">
         <h2>Bienvenue à toi <%= current_user.pseudo %> </h2>
+        </div>
     <% end %>
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
     <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
