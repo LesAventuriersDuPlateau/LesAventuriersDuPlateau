@@ -48,17 +48,15 @@
                     </div>
                 </div>
             </div>
-            <% if user_signed_in? %>
-            <%= form_for @order do |f| %>
-            <%= f.hidden_field :event_id, value: @event.id %>
-            <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-            <button type="submit" class="btn validation-button">Je réserve mon billet</button>
-            <% end %>
-            <% end %>
-              <% if user_signed_in? && current_user.role === 'admin' %>
-                <%= button_to "Supprimer", @event, method: :delete, class: "btn-custom" %>
-              <% end %>
-            <br /><br />
+                <% if user_signed_in? %>
+                        <%= form_for @order do |f| %>
+                        <%= f.hidden_field :event_id, value: @event.id %>
+                        <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+                        <button type="submit" class="btn validation-button">Je réserve mon billet</button>
+                    <% end %>
+                <% end %>
+                        <%= button_to "Supprimer", @event, method: :delete, class: "btn-custom" %>
+                <br /><br />
             </div>
         </div>
     </div>
