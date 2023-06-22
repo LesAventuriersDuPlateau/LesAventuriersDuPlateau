@@ -1,4 +1,6 @@
-
+      <div>
+      <%= render 'events/banner' %>
+      </div>
 <div>
     <% if user_signed_in? && current_user.pseudo ==  nil%>
         <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
