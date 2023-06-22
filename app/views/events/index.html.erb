@@ -1,5 +1,4 @@
 
-<div>
     <section class="body-pseudo p-4">
         <% if user_signed_in? && current_user.pseudo ==  nil%>
             <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
@@ -25,7 +24,7 @@
       <section>
         <%= render 'events/banner' %>
       </section>
-
+      
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
       <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
       <swiper-container class="mySwiper col-11 col-md-8 col-xl-5" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
@@ -76,4 +75,3 @@
             <% end %>
           </div>
       </section>
-  </section>
