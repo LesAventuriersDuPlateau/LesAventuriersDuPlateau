@@ -1,17 +1,20 @@
-      <div>
+      <%# <div>
       <%= render 'events/banner' %>
-      </div>
+      <%# </div> %>
 <div>
-    <% if user_signed_in? && current_user.pseudo ==  nil%>
-        <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-        <h2>Bienvenue parmi nous choisissez votre pseudo pour accéder au site</h2>
-        <div class="field">
-            <%= f.label :pseudo %>
-            <%= f.text_field :pseudo %>
-        </div>
+    <section class="body-pseudo p-4">
+        <% if user_signed_in? && current_user.pseudo ==  nil%>
+            <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
+            <h2>Bienvenue parmi nous, il est temps de choisir ton pseudo</h2>
+            <div class="field">
+                <%= f.label :mon_pseudo, class: 'monpseudo' %>
+                <%= f.text_field :pseudo %>
+        </div>   
+
+            <br>
 
         <div class="actions">
-            <%= f.submit "Mettre à jour le pseudo" %>
+            <%= f.submit "Mettre à jour le pseudo", class: 'btn-out2' %>
         </div>
         <% end %>
     <% end %>
@@ -20,6 +23,9 @@
         <h2>Bienvenue à toi <%= current_user.pseudo %> </h2>
         </div>
     <% end %>
+
+    </section> 
+
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
     <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
         <swiper-container class="mySwiper col-11 col-md-8 col-xl-5" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
