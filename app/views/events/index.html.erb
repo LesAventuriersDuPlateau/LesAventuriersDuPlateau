@@ -27,7 +27,7 @@
             <% @events_carrousel.each do |event| %>
             <swiper-slide class="rounded-3">
                 <div class="container p-0">
-                    <img src="https://images.unsplash.com/flagged/photo-1557427161-4701a0fa2f42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" alt="event image" class="rounded-top-3" />
+                    <img src="<%= event.image_url %>" alt="event image" class="rounded-top-3" />
                     <div class="d-flex flex-column align-items-center">
                         <h3 class="text-center title-event text-uppercase pt-3"> <%= event.title%> </h3>
                         <a href="<%= event_path(event) %>"><button class="buttonMore fs-3 p-0"><pre class="m-0"> + </pre></button></a>
