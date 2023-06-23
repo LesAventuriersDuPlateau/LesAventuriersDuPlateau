@@ -4,7 +4,6 @@
       <% if user_signed_in? && current_user.role === 'admin' %>
         <%= link_to "Corriger l'évènement", edit_event_path(@event) %> |
         <%= link_to "Retour aux évènements", events_path %>
-
     <% end %>
   </div>
 </div>
