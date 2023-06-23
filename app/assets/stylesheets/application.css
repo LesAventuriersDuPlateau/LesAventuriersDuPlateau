@@ -221,6 +221,8 @@ footer{
     height: 0;
 }
 
+    /* NAV BAR */
+
 nav {
     background-color: #FDFAF4;
     color: #0038FF;
@@ -256,6 +258,10 @@ a.navbar-brand {
 
 .nav-item .nav-item:hover {
     text-decoration: none;
+}
+
+.nav-icon {
+    color: #0038FF;
 }
 
 .btn-custom {
