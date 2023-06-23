@@ -1,0 +1,16 @@
+<h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
+<swiper-container class="mySwiper col-12 col-sm-11 col-md-9 col-xl-8" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
+slides-per-view="3" coverflow-effect-rotate="0" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+coverflow-effect-modifier="2" coverflow-effect-slide-shadows="false" loop="true">
+    <% @events_carrousel.each do |event| %>
+    <swiper-slide class="rounded-3">
+    <div class="container p-0">
+        <img src="<%= event.image_url %>" alt="event image" class="rounded-top-3 img-slider" />
+        <div class="d-flex flex-column align-items-center">
+        <h3 class="text-center title-event text-uppercase pt-3"> <%= event.title%> </h3>
+        <a href="<%= event_path(event) %>"><button class="buttonMore fs-3 p-0"><pre class="m-0"> + </pre></button></a>
+        </div>
+    </div>
+    </swiper-slide>
+    <% end %>
+</swiper-container>
