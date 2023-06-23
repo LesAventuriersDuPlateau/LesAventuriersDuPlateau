@@ -315,6 +315,7 @@ a.navbar-brand {
 .card-body{
     font-family: 'Poppins', sans-serif;
     color: #FDFAF4 !important;
+    border: none;
 }
 
 .card-box{
@@ -378,11 +379,13 @@ swiper-slide img {
 }
 
 .buttonMore{
-    border: 2px solid #ff7310;
+    border: 1px solid #ff7310;
     background-color: transparent;
     color: #ff7310;
-    border-radius: 100px;
+    border-radius: 15px;
     margin-bottom: 20px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .bg-pink{
@@ -432,11 +435,18 @@ font-family: 'Poppins', sans-serif;
 
 .card-text {
 color: #FF7310 !important;
+font-family: 'Poppins', sans-serif !important;
 }
 
 .card-title {
 color: #FF7310 !important;
+font-family: 'Bebas Neue', sans-serif;
 }
+
+.custom-card {
+    border: none; 
+    border-radius: 10px; 
+  }
 
 /*Form profil user */
 
