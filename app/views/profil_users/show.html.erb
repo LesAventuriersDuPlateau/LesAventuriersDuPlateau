@@ -1,11 +1,10 @@
-<h1 class="title-page">MON</h1>
-<h1 class="title-page">COMPTE</h1>
+<h2 class="title-page">MON <br> COMPTE</h2>
 <br/>
 <br/>
 
   <section class="pl-2 text-center">
-    <h5 class="text-profiluser">Email : <%= @user.email %></h5>
-    <h5 class="text-profiluser">Pseudo : <%= @user.pseudo %></h5>
+    <h4 class="text-profiluser">Email : <%= @user.email %></h4>
+    <h4 class="text-profiluser">Pseudo : <%= @user.pseudo %></h4>
       <br>
       <br>
         <%= link_to "Modifier mon profil", edit_user_registration_path, class: 'btn-out' %>

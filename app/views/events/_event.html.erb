@@ -1,18 +1,17 @@
 <div id="<%= dom_id event %>">
     <div class="container">
-      <h1 class="special-title">Événe<br>ment</h1>
+      <h2 class="special-title">Événe<br>ment</h2>
           <br>
         <div class="d-flex justify-content-center">
           <div class="col-11 col-md-5">  
             <img src=" <%= event.image_url %> " class="event-img img-fluid rounded-float-start" alt="Image de l'événement">
           </div>
         <div class="event-card d-flex col-11 col-md-5 flex-column align-items-center offset-md-1">
-            <h5 class="event-title">
+            <h4 class="event-title">
                 <strong>
-                    <%= event.title %>
+                    <%= event.title %><p> proposé par : <%= User.find_by(id: event.user_id)&.pseudo %>
                 </strong>
-            </h5>
-             pseudo
+            </h4>
             <div class="card-box card mb-3 p-3">
                 <div class="row g-0"> 
                     <div class="col-md-8">
@@ -32,7 +31,7 @@
                             <p>
                                 <strong>Date:</strong>
                                 <br>
-                                <%= event.start_date %>
+                                <%= event.start_date.strftime("%d %B %Y") %>
                             </p>
                             <p>
                                 <strong>Durée:</strong>
@@ -55,8 +54,7 @@
                         <button type="submit" class="btn validation-button">Je réserve mon billet</button>
                     <% end %>
                 <% end %>
-                        <%= button_to "Supprimer", @event, method: :delete, class: "btn-custom" %>
-                <br /><br />
+                <%= button_to "Supprimer", @event, method: :delete, class: "btn-custom" %>
             </div>
         </div>
     </div>
