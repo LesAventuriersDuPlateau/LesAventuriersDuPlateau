@@ -15,6 +15,7 @@
     <% if user_signed_in? && current_user.pseudo !=  nil%>
         <h2>Bienvenue à toi <%= current_user.pseudo %> </h2>
     <% end %>
+     <%= render 'events/presentation'%>
     <section class="d-flex flex-column justify-content-center align-items-center py-5">
     <h2 class="title-section mb-5 text-uppercase">LES NOUVEAUTÉS</h2>
         <swiper-container class="mySwiper col-11 col-md-8 col-xl-5" pagination="false" effect="coverflow" grab-cursor="true" centered-slides="true"
