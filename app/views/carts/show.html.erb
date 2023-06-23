@@ -1,31 +1,32 @@
 
 <h2 class="special-title">MON <br>PANIER</h2>
+
 <div class="container justify-content-center align-items-center">
     <div class="row text-card">
         <div class="col-lg-8 col-md-8">
             <dl class="row">
                 <% total_price = [] %>
                 <% @events_in_cart.each do |event| %>
-                <div class="border p-2 m-2">
+                <div class="p-2 m-2">
                     <dt class="col-sm-3">Quantité</dt>
                     <dd class="col-sm-9 text-center"><%= event.quantity %></dd>
 
-                        <hr>
+                        <hr style="color: #35DE88;">
                     
                     <dl class="row">
                     <dt class="col-sm-3">Nom de l'événement</dt>
                     <dd class="col-sm-6 text-center"><%= event.event.title %></dd>
                     <dd class="col-sm-3">
-                        <%= button_to "Supprimer cet article", order_path(event.id), method: :delete, class: 'btn-out' %>
+                        <%= button_to "Supprimer cet article", order_path(event.id), method: :delete, class: 'btn-delete' %>
                     </dd>
                     </dl>
 
-                        <hr>
+                        <hr style="color: #35DE88;">
                     
                     <dt class="col-sm-3">Prix unitaire</dt>
                     <dd class="col-sm-9 text-center"><%= event.event.price %> €</dd>
 
-                        <hr>
+                        <hr style="color: #35DE88;">
                     
                     <dt class="col-sm-3">Prix selon quantité</dt>
                     <dd class="col-sm-9 text-center"><%= total_event = event.event.price * event.quantity.to_d %> €</dd>
@@ -50,6 +51,6 @@
     </div>
     
     <% if @events_in_cart.any? %>
-        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: 'btn-out', data: {turbo: false} %>
+        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: 'btn-order', data: {turbo: false} %>
     <% end %>
 </div>
