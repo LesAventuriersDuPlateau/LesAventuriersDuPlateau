@@ -29,7 +29,7 @@ p{
 
 
   .logo_banner{
-    font-size: 9em;
+    font-size: 10vw;
     font-family: 'Bebas Neue', sans-serif;
     line-height: 0.9;
   }
@@ -225,7 +225,7 @@ p{
 
 footer{
     position:relative;
-    margin-top: 45vh;
+    margin-top: 25vh;
     bottom: 0;
     height: 0;
 }
@@ -355,7 +355,7 @@ swiper-slide img {
 }
 
 .img-slider {
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     object-fit: cover;
     object-position: center;
