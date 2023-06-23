@@ -6,7 +6,7 @@
             <img src=" <%= event.image_url %> " class="img-slider rounded-2 col-12" alt="Image de l'événement">
           </div>
         <div class="event-card d-flex col-10 col-md-5 flex-column align-items-center offset-md-1">
-            <h4 class="event-title">
+            <h4 class="event-title text">
                 <strong>
                     <%= event.title %><p> proposé par : <%= User.find_by(id: event.user_id)&.pseudo %>
                 </strong>
@@ -50,7 +50,7 @@
                         <%= form_for @order do |f| %>
                         <%= f.hidden_field :event_id, value: @event.id %>
                         <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-                        <button type="submit" class="btn validation-button">Je réserve mon billet</button>
+                        <button type="submit" class="btn validation-button">Ajouter au panier</button>
                     <% end %>
                 <% end %>
             </div>
