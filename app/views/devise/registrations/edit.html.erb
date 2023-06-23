@@ -1,62 +1,51 @@
-<div class="container">
-<h1 class="special-title">Modifier mon <br> profil<%= resource_name.to_s.humanize %></h1>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="form-edit-user flex-column align-items-center p-4 rounded-3">
+<h1 class="special-title">Modifier mon <br> profil <%= resource_name.to_s.humanize %></h1>
+
+  <div class="py-2 form-group text-center">
+    <label for="email" style="display: block" class="form-label">Email </label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input rounded-3" %>
   </div>
   <br>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :mot_de_passe %> <i>(Entrez ici votre nouveau mot de passe)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> caractères minimum</em>
-    <% end %>
+  <%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
+    <div class="actions text-center">
+      <label for="pseudo" style="display: block" class="form-label">Pseudo </label>
+      <%= f.text_field :pseudo, minlength: 3, class: "form-input rounded-3" %>
+  </div>
+  <br>
+<% end %>
+
+  <div class="py-2 form-group text-center">
+    <label for="current-password" style="display: block" class="form-label">Mot de passe actuel </label>
+    <%= f.password_field :current_password, autocomplete: "current-password", class: "form-input rounded-3" %>
   </div>
   <br>
 
-  <div class="field">
-    <%= f.label :confirmation_de_mot_de_passe %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="py-2 form-group text-center">
+    <label for="new-password" style="display: block" class="form-label">Nouveau mot de passe <i>(6 caractères minimum)</i></label>
+    <%= f.password_field :password, minlength: 6, autocomplete: "new-password", class: "form-input rounded-3" %>
+
+  </div>
+
+  <div class="py-2 form-group text-center">
+    <label for="title" style="display: block" class="form-label">Confirmation nouveau mot de passe </label>
+    <%= f.password_field :password_confirmation, minlength: 6, autocomplete: "new-password", class: "form-input rounded-3" %>
   </div>
   <br>
 
-  <div class="field">
-    <%= f.label :mot_de_passe_actuel %> <i>(Entrez ici votre mot de passe actuel)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-  <br>
-
-  <div class="actions">
+  <div class="actions text-center">
     <%= f.submit "Mettre à jour", class: 'btn-out' %>
   </div>
 <% end %>
   <br>
 
-<%= form_for(current_user, url: new_pseudo_path, method: :patch) do |f| %>
-    <div class="field">
-      <%= f.label :pseudo %> <i>(Modifiez seulement si vous voulez changer votre pseudo)</i><br />
-      <%= f.text_field :pseudo, minlength: 3 %>
-  </div>
-  <br>
-
-  <div class="actions">
-      <%= f.submit "Mettre à jour le pseudo", class: 'btn-out' %>
-  </div>
-<% end %>
-  <br>
-
-<h3>Supprimer mon compte</h3>
-
-<div>Mécontent ? <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?", turbo_confirm: "Êtes-vous sûr ?" }, method: :delete, class: 'btn-out' %></div>
+<div class="text-center"><%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr ?", turbo_confirm: "Êtes-vous sûr ?" }, method: :delete, class: 'btn-out' %></div>
 <br>
 
 <%= link_to "Retour au profil", :back %>

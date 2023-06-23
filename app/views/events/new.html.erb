@@ -1,11 +1,10 @@
 <section class="container py-4">
   <h2 class="title-page">Créer ton<br>événement</h2>
-  <div class="col-8 offset-2">
+  <div class="col-8 offset-2 mb-3">
     <%= render "form", event: @event %>
   </div>
-  <br>
 
   <div>
-    <%= link_to "<-- Retour sur events", events_path,class: "text-decoration-none" %>
+    <%= link_to "Retour à l'accueil", events_path,class: "text-decoration-none" %>
   </div>
 </section>

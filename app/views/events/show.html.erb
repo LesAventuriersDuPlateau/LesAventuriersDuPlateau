@@ -1,6 +1,4 @@
 <div class="container">
-      <p style="color: green"><%= notice %></p>
-
       <%= render @event %>
   <div class="">
       <% if user_signed_in? && current_user.role === 'admin' %>
