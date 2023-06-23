@@ -204,7 +204,11 @@ p{
 }
 
 .special-title {
+    font-family: 'Bebas Neue', sans-serif;
+    color:#0038FF;
     font-size: 95px;
+    margin-top: 20px;
+    margin-left: 30px;
 }
 
 .title-page {
