@@ -5,10 +5,10 @@
 <div class="form-edit-user flex-column align-items-center p-4 rounded-3">
 
   <div class="py-2 form-group text-center">
-    <label for="email" style="display: block" class="form-label">Email </label>
+    <label for="email" style="display: block" class="form-label">E-mail </label>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input rounded-3" %>
   </div>
-  <br>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
@@ -17,20 +17,17 @@
     <div class="actions text-center">
       <label for="pseudo" style="display: block" class="form-label">Pseudo </label>
       <%= f.text_field :pseudo, minlength: 3, class: "form-input rounded-3" %>
-  </div>
-  <br>
-<% end %>
+    </div>
+  <% end %>
 
   <div class="py-2 form-group text-center">
     <label for="current-password" style="display: block" class="form-label">Mot de passe actuel </label>
     <%= f.password_field :current_password, minlength: 6, autocomplete: "current-password", class: "form-input rounded-3" %>
   </div>
-  <br>
 
   <div class="py-2 form-group text-center">
     <label for="new-password" style="display: block" class="form-label">Nouveau mot de passe <i>(6 caractères minimum)</i></label>
     <%= f.password_field :password, minlength: 6, autocomplete: "new-password", class: "form-input rounded-3" %>
-
   </div>
 
   <div class="py-2 form-group text-center">
