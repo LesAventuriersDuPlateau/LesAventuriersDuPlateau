@@ -29,30 +29,24 @@ p{
 
 
   .logo_banner{
-    font-size: 9em;
     max-width: 842px;
+    height: 80%;
+    font-size: 9em;
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Cela permet d'obtenir un positionnement précis au centre de la bannière, peu importe sa taille, et assure ainsi que le texte reste toujours centré et bien visible. */
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
     line-height: 0.9;
   }
 
-
-.logo_introduce {
+  .logo_introduce {
     width: auto;
     height: auto;
-    font-size: 14px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Cela permet d'obtenir un positionnement précis au centre de la bannière, peu importe sa taille, et assure ainsi que le texte reste toujours centré et bien visible. */
-    text-align: center;
     color: #0038FF ;
     font-family: 'Poppins', sans-serif;
-  }
+    font-size: 14px;
+}
 
 .banner-btn {
     border: none;
