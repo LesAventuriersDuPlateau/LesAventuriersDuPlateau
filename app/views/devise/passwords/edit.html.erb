@@ -7,12 +7,12 @@
 <div class="container">
   <div class="py-2 form-group text-center">
     <label for="new-password" style="display: block" class="form-label">Nouveau mot de passe <i>(6 caractères minimum)</i></label>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-input rounded-3" %>
+    <%= f.password_field :password, autofocus: true, minlength: 6, autocomplete: "new-password", class: "form-input rounded-3" %>
    </div>
 
   <div class="py-2 form-group text-center">  
     <label for="new-password-confirmation" style="display: block" class="form-label">Confirmer le nouveau mot de passe </label>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input rounded-3" %>
+    <%= f.password_field :password_confirmation, minlength: 6, autocomplete: "new-password", class: "form-input rounded-3" %>
   </div>
   <br>
 

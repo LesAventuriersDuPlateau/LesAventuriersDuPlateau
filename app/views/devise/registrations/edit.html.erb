@@ -23,7 +23,7 @@
 
   <div class="py-2 form-group text-center">
     <label for="current-password" style="display: block" class="form-label">Mot de passe actuel </label>
-    <%= f.password_field :current_password, autocomplete: "current-password", class: "form-input rounded-3" %>
+    <%= f.password_field :current_password, minlength: 6, autocomplete: "current-password", class: "form-input rounded-3" %>
   </div>
   <br>
 
@@ -40,7 +40,7 @@
   <br>
 
   <div class="actions text-center">
-    <%= f.submit "Mettre à jour", class: 'btn-out' %>
+    <%= f.submit "Mettre à jour le profil", class: 'btn-out' %>
   </div>
 <% end %>
   <br>

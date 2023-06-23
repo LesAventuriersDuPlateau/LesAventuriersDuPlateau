@@ -112,6 +112,7 @@ p{
     width: 100%;
     max-width: 400px;
     justify-self: center;
+    padding-left: 10px;
 }
 
 .sign-up input[type="submit"] {
@@ -177,6 +178,7 @@ p{
     width: 100%;
     max-width: 400px;
     justify-self: center;
+    padding-left: 10px;
 }
 
 .log-in input[type="submit"] {
