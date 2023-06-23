@@ -1,13 +1,11 @@
+<h2 class="special-title">MON <br>PANIER</h2>
 <div class="container">
-    <h1 class="title-page">MON</h1>
-    <h1 class="title-page">PANIER</h1>
-    <br/>
-    <br/>
-    <div class="row text-card">
-        <div class="col-lg-8 col-md-8">
-            <dl class="row">
+    <div class="row m-0 text-card">
+        <div class="col-11 col-lg-8 col-md-8 ms-0">
+            <dl class="row m-0">
                 <% total_price = [] %>
                 <% @events_in_cart.each do |event| %>
+                <div class="border p-2 m-2">
                     <dt class="col-sm-3">Quantité</dt>
                     <dd class="col-sm-9"><%= event.quantity %></dd>
 
@@ -35,6 +33,7 @@
                     
                     <dt class="col-sm-3"></dt>
                     <dd class="col-sm-9"></dd>
+                </div>
                 <% end %>
                 
                 <dt class="col-sm-3"></dt>

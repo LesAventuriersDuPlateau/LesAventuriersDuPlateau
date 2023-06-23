@@ -1,3 +1,3 @@
-5.times do 
-    Event.create(title: Faker::Games::SuperMario.game, description: Faker::Game.platform, price: Faker::Number.decimal(l_digits: 2), image_url: Faker::LoremFlickr.image(size: "50x60", search_terms: ['boardgames']), city: Faker::Address.city, zip_code: Faker::Address.zip_code, start_date: Faker::Time.backward(days: 5, period: :morning, format: :short), duration: Faker::Number.number(digits: 2), is_validate: true)
-  end
+# 5.times do 
+#     Event.create(title: Faker::Games::SuperMario.game, description: Faker::Game.platform, price: Faker::Number.decimal(l_digits: 2), image_url: Faker::LoremFlickr.image(size: "50x60", search_terms: ['boardgames']), city: Faker::Address.city, zip_code: Faker::Address.zip_code, start_date: Faker::Time.backward(days: 5, period: :morning, format: :short), duration: Faker::Number.number(digits: 2), is_validate: true)
+#   end

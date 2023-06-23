@@ -1,12 +1,10 @@
-
-
 <div class="container">
-<h1 class= "txt-blue" >Bienvenue sur votre Tableau de bord administrateur </h1>
+<h2 class= "txt-blue" >Bienvenue sur votre Tableau de bord administrateur </h2>
 <p class= "txt-blue" >Veuillez accepter ou refuser les événements suivants :</p>
-  <div class="d-flex flex-wrap justify-content-center">
+  <div class="d-flex flex-wrap justify-content-center flex-column flex-md-row">
     <% @events_false.each do |event| %>
-    <div class="col-5 m-2"> 
-        <div class="card dashboardcard">
+    <div class="col-11 col-md-5 m-2"> 
+        <div class="card txt-orange">
             <div class="card-header cardcolor" >Proposé par <%= User.find_by(id: event.user_id)&.pseudo %></div>
             <div class="card-body">
                 <h5 class="card-title">Événement : <%= event.title %></h5>
@@ -20,13 +18,11 @@
                 <p class="card-text">Prix : <%= event.price %>€</p>
             </div>
         </div>
-        <div class="btn-group m-3 d-flex justify-content-between">
-        <%= button_to "Valider l'événement", admin_path(event), method: :patch, class: 'btn-dashboard' %>
-        <%= button_to "Refuser l'événement", admin_path(event), method: :delete, class: 'btn-dashboard' %>
+        <div class="btn-group m-3 d-flex flex-column flex-md-row justify-content-between">
+          <%= button_to "Valider l'événement", admin_path(event), method: :patch, class: 'btn-dashboard m-2' %>
+          <%= button_to "Refuser l'événement", admin_path(event), method: :delete, class: 'btn-dashboard m-2' %>
       </div> 
     </div>    
     <% end %>
   </div>
 </div>
-
-<%# "col-lg-12 col-md-6 col-sm-4" %>

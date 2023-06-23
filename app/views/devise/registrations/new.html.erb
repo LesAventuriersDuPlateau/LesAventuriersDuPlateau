@@ -1,31 +1,32 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-<div class="card-sign_up">
+<div class="container-sign_up">
   <div class="card-body-sign_up">
-    <h1 style="text-align: center">S'INSCRIRE</h1>
-    <div class="field-sign_up">
-     <%= f.label :email %>
-     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
+    <h2 style="text-align: center">S'INSCRIRE</h2>
+      <div class="field-sign_up">
+        <label for="email" style="display: block" class="form-label">E-mail </label>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-  <div class="field-sign_up">
-    <%= f.label :créer_le_mot_de_passe %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+      <div class="field-sign_up">
+        <label for="create_password" style="display: block" class="form-label">Créer le mot de passe </label>
+        <%= f.password_field :password, minlength: 6, autocomplete: "new-password" %>
+      </div>
 
-  <div class="field-sign_up">
-    <%= f.label :confirmer_le_mot_de_passe %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="field-sign_up">
+        <label for="confirm_email" style="display: block" class="form-label">Confirmer le mot de passe </label>
+        <%= f.password_field :password_confirmation, minlength: 6, autocomplete: "new-password" %>
+      </div>
 
   <div class="sign-up">
    <div style="text-align: center">
-    <%= f.submit "Créer le compte" %><br>
-    <br>
-     <%= render "devise/shared/links" %>
+      <%= f.submit "Créer le compte" %><br>
+      <br>
+    <%= render "devise/shared/links" %>
+    </div>
    </div>
-  </div>
   <% end %>
- </div>
+  </div>
+  </div>
 </div>
