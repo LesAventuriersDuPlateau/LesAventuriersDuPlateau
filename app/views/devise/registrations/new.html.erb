@@ -11,12 +11,12 @@
 
   <div class="field-sign_up">
     <%= f.label :créer_le_mot_de_passe %>
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, minlength: 6, autocomplete: "new-password" %>
   </div>
 
   <div class="field-sign_up">
     <%= f.label :confirmer_le_mot_de_passe %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, minlength: 6, autocomplete: "new-password" %>
   </div>
 
   <div class="sign-up">
