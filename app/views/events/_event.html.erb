@@ -9,10 +9,9 @@
         <div class="event-card d-flex col-11 col-md-5 flex-column align-items-center offset-md-1">
             <h4 class="event-title">
                 <strong>
-                    <%= event.title %>
+                    <%= event.title %><p> proposé par : <%= User.find_by(id: event.user_id)&.pseudo %>
                 </strong>
             </h4>
-             pseudo
             <div class="card-box card mb-3 p-3">
                 <div class="row g-0"> 
                     <div class="col-md-8">
