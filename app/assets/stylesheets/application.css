@@ -27,12 +27,14 @@ p{
     height: auto; 
 }
 
-.logo_banner {
-    max-width: 842px;
-    height: 80%;
-}
 
-.logo_introduce {
+  .logo_banner{
+    font-size: 10vw;
+    font-family: 'Bebas Neue', sans-serif;
+    line-height: 0.9;
+  }
+
+  .logo_introduce {
     width: auto;
     height: auto;
     color: #0038FF ;
@@ -53,9 +55,10 @@ p{
 }
 
 .container-banner {
+    width: 100%;
     position: absolute;
     left: 50%;
-    top: 7%;
+    top: 30%;
     transform: translate(-50%, -25%);
 }
 
@@ -222,10 +225,12 @@ p{
 
 footer{
     position:relative;
-    margin-top: 45vh;
+    margin-top: 25vh;
     bottom: 0;
     height: 0;
 }
+
+    /* NAV BAR */
 
 nav {
     background-color: #FDFAF4;
@@ -262,6 +267,10 @@ a.navbar-brand {
 
 .nav-item .nav-item:hover {
     text-decoration: none;
+}
+
+.nav-icon {
+    color: #0038FF;
 }
 
 .btn-custom {
@@ -306,6 +315,7 @@ a.navbar-brand {
 .card-body{
     font-family: 'Poppins', sans-serif;
     color: #FDFAF4 !important;
+    border: none;
 }
 
 .card-box{
@@ -345,7 +355,7 @@ swiper-slide img {
 }
 
 .img-slider {
-    height: 30vh;
+    height: 35vh;
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -369,11 +379,13 @@ swiper-slide img {
 }
 
 .buttonMore{
-    border: 2px solid #ff7310;
+    border: 1px solid #ff7310;
     background-color: transparent;
     color: #ff7310;
-    border-radius: 100px;
+    border-radius: 15px;
     margin-bottom: 20px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .bg-pink{
@@ -423,11 +435,18 @@ font-family: 'Poppins', sans-serif;
 
 .card-text {
 color: #FF7310 !important;
+font-family: 'Poppins', sans-serif !important;
 }
 
 .card-title {
 color: #FF7310 !important;
+font-family: 'Bebas Neue', sans-serif;
 }
+
+.custom-card {
+    border: none; 
+    border-radius: 10px; 
+  }
 
 /*Form profil user */
 
