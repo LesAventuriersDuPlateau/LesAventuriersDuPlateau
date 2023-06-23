@@ -5,22 +5,14 @@
   <%= f.hidden_field :reset_password_token %>
 
 <div class="container">
-  <div class="field">
-   <div style="text-align: center">
-    <%= f.label :password, "Nouveau mot de passe" %><br />
-    <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> caractères minimum)</em><br />
-    <% end %>
-    <%= f.password_field :password, autofocus: true, autocomplete: "new-password" %>
+  <div class="py-2 form-group text-center">
+    <label for="new-password" style="display: block" class="form-label">Nouveau mot de passe <i>(6 caractères minimum)</i></label>
+    <%= f.password_field :password, autofocus: true, autocomplete: "new-password", class: "form-input rounded-3" %>
    </div>
-  </div>
-  <br>
 
-  <div class="field">
-   <div style="text-align: center">
-    <%= f.label :password_confirmation, "Confirmer le nouveau mot de passe" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-   </div>
+  <div class="py-2 form-group text-center">  
+    <label for="new-password-confirmation" style="display: block" class="form-label">Confirmer le nouveau mot de passe </label>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input rounded-3" %>
   </div>
   <br>
 
@@ -30,4 +22,3 @@
    </div>
   </div>
 <% end %>
-<br>
