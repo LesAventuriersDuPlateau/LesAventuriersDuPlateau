@@ -5,7 +5,7 @@
       <p class="m-0 text-bolder fs-6"><strong>Bienvenue parmi nous, il est temps de choisir ton pseudo</strong></p>
       <%= form_for(current_user, url: new_pseudo_path, method: :patch, html: { class: 'd-flex align-items-center flex-column flex-sm-row' }) do |f| %>
           <div class="field mx-4">
-            <%= f.label :mon_pseudo, class: 'txt-orange' %>
+            <%= f.label :mon_pseudo, class: 'txt-grey' %>
             <%= f.text_field :pseudo, class: 'rounded-2' %>
           </div>   
         <div class="actions my-2">

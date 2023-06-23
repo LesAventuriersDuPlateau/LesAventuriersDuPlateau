@@ -32,26 +32,29 @@ p{
     font-size: 10vw;
     font-family: 'Bebas Neue', sans-serif;
     line-height: 0.9;
+    color: #FDFAF4 !important;
+    text-shadow: 1px 1px 2px #232323;
   }
 
   .logo_introduce {
     width: auto;
     height: auto;
-    color: #0038FF ;
+    color: #FDFAF4 ;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    text-shadow: 1px 1px 2px #232323;
+    font-size: 18px;
 }
 
 .banner-btn {
     border: none;
-    padding: 6px;
+    padding: 12px;
     font-family: 'Poppins', sans-serif;
     color: #F5C0FB;
     background-color: #0038FF;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .container-banner {
@@ -383,7 +386,7 @@ swiper-container {
 swiper-slide {
     background-position: center;
     background-size: cover;
-    background-color: #f5c0fb;
+    background-color: #35DE88;
     width: 150px;
     height: 100px;
 }
@@ -418,17 +421,31 @@ swiper-slide img {
 }
 
 .buttonMore{
-    border: 1px solid #ff7310;
+    border: 1px solid #232323;
     background-color: transparent;
-    color: #ff7310;
+    color: #232323;
     border-radius: 15px;
     margin-bottom: 20px;
     font-size: 12px;
     font-family: 'Poppins', sans-serif !important;
 }
 
-.bg-pink{
-    background-color: #f5c0fb !important;
+.buttonMore2{
+    text-decoration: none;
+    border: none;
+    padding: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #FDFAF4;
+    background-color: #35DE88;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding-inline: 10px;
+}
+
+.bg-green{
+    background-color: #35DE88 !important;
 }
 .bg-orange{
     background-color: #FF7310 !important;
@@ -442,13 +459,17 @@ swiper-slide img {
     color: #0038FF !important;
 }
 
+.txt-grey {
+    color: #232323 !important;
+}
+
 .text-card {
     color: #0038FF !important;
     font-family: 'Poppins', sans-serif;
 }
 
 .text-profiluser {
-color: #FF7310 !important;
+color: #0038FF !important;
 font-family: 'Poppins', sans-serif;
 }
 
@@ -458,8 +479,8 @@ font-family: 'Poppins', sans-serif;
   padding: 4px;
   font-family: 'Poppins', sans-serif;
   font-size: 1em;
-  color: #FF7310;
-  background-color: #F5C0FB;
+  color: #FDFAF4;
+  background-color: #35DE88;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -467,17 +488,17 @@ font-family: 'Poppins', sans-serif;
 }
 
 .cardcolor{
-    background-color: #F5C0FB !important;
-    color: #FF7310 !important;
+    background-color: #0038FF !important;
+    color: #FDFAF5 !important;
   }
 
 .card-text {
-color: #FF7310 !important;
+color: #0038FF !important;
 font-family: 'Poppins', sans-serif !important;
 }
 
 .card-title {
-color: #FF7310 !important;
+color: #0038FF !important;
 font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -493,7 +514,7 @@ font-family: 'Bebas Neue', sans-serif;
 
 .form-label {
     font-family: 'Poppins', sans-serif;
-    color: #FF7310;
+    color: #0038FF;
     display: flex;
     align-items: center;
     margin-top: 30px;
@@ -542,8 +563,8 @@ font-family: 'Bebas Neue', sans-serif;
     padding: 6px;
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
-    color: #f5c0fb;
-    background-color: #FF7310;
+    color: #FDFAF4;
+    background-color: #0038FF;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
