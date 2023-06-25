@@ -1,7 +1,6 @@
 
 <h2 class="special-title">MON <br>PANIER</h2>
-
-<div class="container justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center mt-5">
     <div class="row text-card">
         <div class="col-lg-8 col-md-8">
             <dl class="row">
@@ -17,7 +16,7 @@
                     <dt class="col-sm-3">Nom de l'événement</dt>
                     <dd class="col-sm-6 text-center"><%= event.event.title %></dd>
                     <dd class="col-sm-3">
-                        <%= button_to "Supprimer cet article", order_path(event.id), method: :delete, class: 'btn-delete' %>
+                        <%= button_to "Supprimer", order_path(event.id), method: :delete, class: 'btn-delete' %>
                     </dd>
                     </dl>
 
@@ -47,10 +46,11 @@
                 <dt class="col-sm-3 font-weight-bold">Prix total :</dt>
                 <dd class="col-sm-9 text-center"><%= total_price.inject(0){|sum,x| sum + x } %> €</dd>
             </dl>
-        </div>
-    </div>
     
     <% if @events_in_cart.any? %>
-        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: 'btn-order', data: {turbo: false} %>
+        <%= button_to "Passer commande", checkout_create_path(total: total_price.inject(0){|sum,x| sum + x }), class: 'btn-order align-items-right', data: {turbo: false} %>
     <% end %>
 </div>
+</div>
+</div>
+
