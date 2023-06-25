@@ -1,7 +1,7 @@
 <section class="banner">
   <%= render 'events/banner' %>
   <% if user_signed_in? && current_user.pseudo ==  nil%>
-    <div class="container-pseudo bg-pink d-flex flex-column align-items-center p-1">
+    <div class="container-pseudo d-flex flex-column align-items-center p-1">
       <p class="m-0 text-bolder fs-6"><strong>Bienvenue parmi nous, il est temps de choisir ton pseudo</strong></p>
       <%= form_for(current_user, url: new_pseudo_path, method: :patch, html: { class: 'd-flex align-items-center flex-column flex-sm-row' }) do |f| %>
           <div class="field mx-4">
