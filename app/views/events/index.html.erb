@@ -15,7 +15,7 @@
     <% end %>
     <% if user_signed_in? && current_user.pseudo !=  nil%>
       <div style="text-align: center">
-        <h3>Bienvenue à toi <%= current_user.pseudo %> </h3>
+        <h3 class="pseudo_title mt-5">Bienvenue à toi <%= current_user.pseudo %> </h3>
       </div>
     </div>
   <% end %>
