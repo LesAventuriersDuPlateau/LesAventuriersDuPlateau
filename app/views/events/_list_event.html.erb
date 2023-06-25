@@ -14,7 +14,7 @@
         <h4 class="card-title"><%= event.title %></h4>
         <p class="card-text "><%= event.price %> €</p>
             <div class="container-fluid d-flex justify-content-center">
-            <a href="<%= event_path(event) %>", class="buttonMore mx-2 p-2">Voir plus</a>
+            <a href="<%= event_path(event) %>", class="buttonMore text-decoration-none mx-2 p-2">Voir plus</a>
                 <% if user_signed_in? %>
                 <%= form_for @order do |f| %>
                 <%= f.hidden_field :event_id, value: event.id %>
