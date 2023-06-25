@@ -4,7 +4,7 @@
   <div class="d-flex flex-wrap justify-content-center flex-column flex-md-row">
     <% @events_false.each do |event| %>
     <div class="col-11 col-md-5 m-2"> 
-        <div class="card txt-orange">
+        <div class="card">
             <div class="card-header cardcolor" >Proposé par <%= User.find_by(id: event.user_id)&.pseudo %></div>
             <div class="card-body">
                 <h5 class="card-title">Événement : <%= event.title %></h5>

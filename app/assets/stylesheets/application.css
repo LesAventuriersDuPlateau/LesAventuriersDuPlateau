@@ -259,11 +259,6 @@ a.navbar-brand {
     color: #000000;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #FF7310;
-    text-decoration: none;
-}
-
 #navbar-list li {
     list-style: none;
     text-decoration: none;
@@ -407,11 +402,6 @@ swiper-slide img {
     color: #0038FF;
 }
 
-.title-event{
-    font-size: 1em;
-    color: #ff7310;
-}
-
 .buttonMore{
     border: 1px solid #232323;
     background-color: transparent;
@@ -438,13 +428,6 @@ swiper-slide img {
 
 .bg-green{
     background-color: #35DE88 !important;
-}
-.bg-orange{
-    background-color: #FF7310 !important;
-}
-
-.txt-pink {
-    color: #f5c0fb !important;
 }
 
 .txt-blue {
