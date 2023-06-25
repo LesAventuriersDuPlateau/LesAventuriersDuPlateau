@@ -545,6 +545,12 @@ font-family: 'Bebas Neue', sans-serif;
     -moz-border-radius: 5px;
 }
 
+.notice{
+    color: #232323;
+    background-color: #35DE88;
+    padding-inline: 10px;
+}
+
 .my-div {
     position: absolute;
     top: 70px;
@@ -555,4 +561,9 @@ font-family: 'Bebas Neue', sans-serif;
 }
 .my-div.hidden {
     opacity: 0;
+}
+
+.container-cart-item {
+    border: #35DE88 1px solid;
+    border-radius: 10px;
 }
