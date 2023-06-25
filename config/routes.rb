@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :carts, except: [:index, :new, :edit]
   resources :events
   resources :profil_users, only: [:show]
+  delete "profil_user_delete" , to: 'profil_users#delete'
   devise_for :users
   resources :pseudo
   root to: "events#index"
