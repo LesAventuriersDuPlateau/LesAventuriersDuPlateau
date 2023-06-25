@@ -108,7 +108,7 @@ p{
     color: #FDFAF4;
     flex-grow: 1;
     border: none;
-    border-bottom: 1px solid #F5C0FB;
+    border-bottom: 1px solid #35DE88;
     background-color: #0038FF;
     margin-left: 10px;
     width: 100%;
@@ -502,7 +502,7 @@ font-family: 'Bebas Neue', sans-serif;
     color: #0038FF;
     flex-grow: 1;
     border: none;
-    border-bottom: 1px solid #F5C0FB;
+    border-bottom: 1px solid #35DE88;
     width: 100%;
     max-width: 400px;
     justify-self: center;
